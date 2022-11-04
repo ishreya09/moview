@@ -34,3 +34,10 @@ h1{
 .Button:hover{
   font-weight: 500;
 }
+
+.MyCard{
+  display: inline-block;
+  float: left;
+  margin :10px;
+  padding:10px;
+}
