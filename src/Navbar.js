@@ -10,7 +10,7 @@ function Navbar() {
             <div className="container-fluid bg-primary">
                 <nav className="navbar navbar-expand-lg  text-light">
 
-                    <a className="navbar-brand text-light" href="/"><h3>MoVIEW</h3></a>
+                    <a className="navbar-brand text-light" href="/"><h1 style={{fontSize:"25px"}}>MoVIEW</h1></a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

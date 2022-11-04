@@ -22,3 +22,12 @@ code {
 .CarouselImage {
   width: auto;
 }
+
+h1{
+  font-family: source-code-pro;
+}
+
+.Button{
+  margin-left:3px;
+  margin-right:3px;
+}

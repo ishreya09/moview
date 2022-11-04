@@ -66,7 +66,7 @@ function CarouselSlideShow() {
                                 active: imageIndex === index
                             })}
                         >
-                            <img className="CarouselImage" src={url}  alt={alt} height={height} />
+                            <img className="CarouselImage" src={url} alt={alt} height={height} />
                         </div>
                     ))}
                 </div>
@@ -98,8 +98,8 @@ function CarouselSlideShow() {
 function About() {
     return (
         <div>
-            <h1 className="text-primary" style={{fontSize:"100px",opacity:"90px"}}>MoVIEW</h1>
-            <h3 className="text-start">About Us</h3>   
+            <h1 className="text-primary" style={{ fontSize: "100px", opacity: "90px" }}>MoVIEW</h1>
+            <h3 className="text-start">About Us</h3>
             <p className="text-start">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum dolorum enim hic atque quos!
                 Fugiat eligendi fuga ipsam aliquid dolorem consequuntur assumenda modi quae quam debitis commodi
@@ -119,6 +119,32 @@ function About() {
                 Nisi repudiandae ab at ipsum facilis ipsam totam, quam consequuntur aliquam necessitatibus est possimus
 
             </p>
+            <div className="container">
+                <div className="row">
+                    <div className="col">
+                        <img src="https://images.pexels.com/photos/13350289/pexels-photo-13350289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="image1" style={{ height: "300px", width: "auto" }} />
+                    </div>
+                    <div className="col">
+                        <button className="Button btn btn-outline-primary display-inline">Review A Movie</button>
+                        <button className="Button btn btn-outline-primary display-inline">Add A Movie</button>
+                        <br />
+                        <hr />
+                        <h3 className="text-center">Features</h3>
+                        <hr />
+                        <ul className="text-start">
+                            <li>dsjcjdsbv</li>
+                            <li>dsjcjdsbv</li>
+                            <li>dsjcjdsbv</li>
+                            <li>dsjcjdsbv</li>
+                            <li>dsjcjdsbv</li>
+                            <li>dsjcjdsbv</li>
+                            <li>dsjcjdsbv</li>
+                            <li>dsjcjdsbv</li>
+                            <li>dsjcjdsbv</li>  
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
