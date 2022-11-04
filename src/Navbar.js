@@ -17,30 +17,19 @@ function Navbar() {
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <button className="btn btn-outline-primary">
+                            <li className="nav-item Button">
                                     <a className="nav-link text-light" aria-current="page" to="/" href="/">Home</a>
-                                </button>
                             </li>
-                            <li className="nav-item">
-                                <button className="btn btn-outline-primary">
-                                    <a className="nav-link text-light" href="#">Account</a>
-                                </button>
-                            </li>
-                            <li className="nav-item">
-                                <button className="btn btn-outline-primary">
+                            <li className="nav-item Button">
                                     <a className="nav-link text-light" href="#">Movies</a>
-                                </button>
                             </li>
-                            <li className="nav-item">
-                                <button className="btn btn-outline-primary">
+                            <li className="nav-item Button">
                                     <a className="nav-link text-light" href="#">Contact Us</a>
-                                </button>
                             </li>
                         </ul>
                         <form className="d-flex" role="search">
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-dark text-light" type="submit">Search</button>
+                            <button className="Button btn btn-outline-dark text-light" type="submit">Search</button>
                         </form>
                         {/* <Routes> */}
                             {/* <Route exact path="/" element={<Home/>}/> */}
