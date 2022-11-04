@@ -18,3 +18,7 @@ code {
   left: 0;
   bottom: 0;
 }
+
+.CarouselImage {
+  width: auto;
+}
