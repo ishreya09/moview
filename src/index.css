@@ -41,3 +41,44 @@ h1{
   margin :10px;
   padding:10px;
 }
+
+.MovieImage{
+  width:auto;
+  height:500px;
+}
+
+.MovieTrailer{
+  width:750px;
+  height:500px;
+}
+
+.MovieTitle{
+  font-size: 100px;
+}
+
+.MovieCast{
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+
+.MovieCast li {
+  border: 1px solid rgb(208, 208, 208); /* Add a thin border to each list item */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #ffffff; /* Add a grey background color */
+  padding: 12px; /* Add some padding */
+}
+.MovieReview{
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+
+.MovieReview li {
+  border: 1px solid rgb(208, 208, 208); /* Add a thin border to each list item */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #ffffff; /* Add a grey background color */
+  padding: 12px; /* Add some padding */
+}
