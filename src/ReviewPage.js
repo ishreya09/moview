@@ -3,25 +3,34 @@ import React from "react";
 class ReviewForm extends React.Component {
     render() {
         return (
-            <div className="ReviewForm">
-                <form>
-                    <div class="mb-3 text-start">
-                        <label for="name" class="form-label text-muted ">Your Name</label>
-                        <input type="text" name="name" class="form-control" id="name" placeholder="John Doe" />
+            <div className="ReviewForm container">
+                <form className="container-fluid" method="post" action="#">
+                    <div className="mb-3 text-start">
+                        <label for="name" className="form-label text-muted ">Your Name</label>
+                        <input type="text" name="name" className="form-control" id="name" placeholder="John Doe" />
                     </div>
-                    <div class="mb-3 text-start">
-                        <label for="email" class="form-label text-muted ">Email address</label>
-                        <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" />
+                    <div className="mb-3 text-start">
+                        <label for="email" className="form-label text-muted ">Email address</label>
+                        <input type="email" name="email" className="form-control" id="email" placeholder="name@example.com" />
                     </div>
-                    <div class="mb-3 text-start">
-                        <label for="review" class="form-label text-muted ">Your Review</label>
-                        <textarea class="form-control" name="user-review" id="review" rows="4"></textarea>
+                    <div className="mb-3 text-start">
+                        <label for="review" className="form-label text-muted ">Your Review</label>
+                        <textarea className="form-control" name="user-review" id="review" rows="4"></textarea>
                     </div>
+                    <input type="submit" className="btn btn-outline-primary" />            
                 </form>
             </div>
         );
     }
 }
+
+{/* <ReviewPage image="https://images.pexels.com/photos/9420597/pexels-photo-9420597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    video="https://www.youtube.com/watch?v=NcE83Txe-3g"
+    title="Harry Potter" summary="sdfhb dewuyfgewugdwsu Lorem lorem rem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi laudantium recusandae mollitia sint exercitationem magni nostrum ex tempora repellendus, provident illum doloremque quod, laboriosam itaque molestiae, at possimus voluptate commodi perspiciatis. Fugiat quo magnam at unde possimus? Fuga perferendis fesfwegueqhuw grebge"
+    rating={5} genre="children, fantasy" duration="2hrs 30mins"
+    review={review} language="English" castinfo={cast} >description as child of the component
+    Lorem lorem rem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi laudantium recusandae mollitia sint exercitationem magni nostrum ex tempora repellendus, provident illum doloremque quod, laboriosam itaque molestiae, at possimus voluptate commodi perspiciatis. Fugiat quo magnam at unde possimus? Fuga perferendis rerum facere rem, qui sapiente. Fugit, labore est veniam corrupti rem sit ullam nam? Voluptas, autem! Similique ex mollitia sed, eius praesentium neque tempora dolore hic minus ullam, laborum est reiciendis doloremque quos odit saepe cum distinctio totam quae delectus. Deleniti sit, praesentium voluptas nobis in nesciunt cumque sunt excepturi at, obcaecati eligendi alias facere perspiciatis fugit voluptate nam quaerat quia aliquid aut placeat illum cupiditate mollitia provident. Doloribus ut deserunt a, culpa impedit praesentium minima facilis reiciendis ratione! Soluta sequi dignissimos repellendus, quae ipsa nobis officiis! Quasi atque odio, amet tempora aut assumenda sit ea sapiente est? Repudiandae mollitia assumenda ad dignissimos. Explicabo, libero adipisci? Voluptates error nostrum iusto cum ea accusantium autem possimus quisquam aspernatur voluptatem enim, dolores obcaecati numquam praesentium placeat libero omnis exercitationem sed, voluptatibus
+</ReviewPage> */}
 
 function ReviewPage(props) {
     // get embedded youtube link
