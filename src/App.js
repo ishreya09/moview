@@ -7,6 +7,8 @@ import ReviewPage from './components/ReviewPage/ReviewPage';
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import ContactUs from './components/ContactUs/ContactUs';
 import ReviewMovie from './components/ReviewPage/ReviewMovie';
+import LoginForm from './components/Login/LoginForm';
+import SignupForm from './components/SignUp/SignupForm';
 
 function App() {
   var cast=[{id:"1",actor:"abc"},{id:"2",actor:"def"},{id:"3",actor:"efg"}];
@@ -21,6 +23,8 @@ function App() {
           <Route path="/movies" element={<MovieList></MovieList>}></Route>
           <Route path="/movies/:type" element={<MovieList></MovieList>}></Route>
           <Route path="/contactus" element={<ContactUs></ContactUs>}></Route>
+          <Route path="/signup" element={<SignupForm ></SignupForm>}></Route>
+          <Route path="/login" element={<LoginForm></LoginForm>}></Route>
           <Route path="/*" element={<h1>404: Page Not Found</h1>}></Route>
 
         </Routes>

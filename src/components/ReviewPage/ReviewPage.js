@@ -4,6 +4,7 @@ import '../../index.css';
 import "./ReviewPage.css";
 
 class ReviewForm extends React.Component {
+    // review form to be visible only when user is logged in
     render() {
         return (
             <div className="ReviewForm container">

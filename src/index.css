@@ -23,8 +23,12 @@ code {
   width: auto;
 }
 
-h1{
+h1 p{
   font-family: source-code-pro;
+}
+
+p {
+  text-align: left;
 }
 
 .Button{
