@@ -1,4 +1,7 @@
 import React from "react";
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import '../../index.css';
+import "./ReviewPage.css";
 
 class ReviewForm extends React.Component {
     render() {
@@ -25,7 +28,7 @@ class ReviewForm extends React.Component {
 }
 
 {/* <ReviewPage image="https://images.pexels.com/photos/9420597/pexels-photo-9420597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    video="https://www.youtube.com/watch?v=NcE83Txe-3g"
+    video="https://www.youtube.com/embed/NcE83Txe-3g"
     title="Harry Potter" summary="sdfhb dewuyfgewugdwsu Lorem lorem rem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi laudantium recusandae mollitia sint exercitationem magni nostrum ex tempora repellendus, provident illum doloremque quod, laboriosam itaque molestiae, at possimus voluptate commodi perspiciatis. Fugiat quo magnam at unde possimus? Fuga perferendis fesfwegueqhuw grebge"
     rating={5} genre="children, fantasy" duration="2hrs 30mins"
     review={review} language="English" castinfo={cast} >description as child of the component
@@ -46,7 +49,7 @@ function ReviewPage(props) {
                         <img src={props.image} className="MovieImage" ></img>
                     </div>
                     <div className="col text-start">
-                        <iframe className="MovieTrailer" src="https://www.youtube.com/embed/NcE83Txe-3g"
+                        <iframe className="MovieTrailer" src={props.url}
                             title="Harry Potter - Hermione's Most Sassy Moments" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
@@ -80,10 +83,7 @@ function ReviewPage(props) {
                 </div>
                 <div>
                     <h1 className="text-start">Write a Review</h1>
-                    <form>
-                        {/* trigger an event for each value */}
-                        <ReviewForm />
-                    </form>
+                    <ReviewForm />
                 </div>
                 <div>
                     <h1 className="text-start">Review</h1>

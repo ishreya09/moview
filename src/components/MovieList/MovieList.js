@@ -1,5 +1,9 @@
 import React from "react"
 import Card from "./Card";
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import '../../index.css';
+import "./MovieList.css"
+
 
 function MovieList(){
     return (

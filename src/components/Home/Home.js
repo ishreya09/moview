@@ -1,6 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import classNames from "classnames";
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import '../../index.css';
+import "./Home.css"
+
 
 const images = [
     {
@@ -125,8 +129,7 @@ function About() {
                         <img src="https://images.pexels.com/photos/13350289/pexels-photo-13350289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="image1" style={{ height: "300px", width: "auto" }} />
                     </div>
                     <div className="col">
-                        <button className="Button btn btn-outline-primary display-inline">Review A Movie</button>
-                        <button className="Button btn btn-outline-primary display-inline">Add A Movie</button>
+                        <a href="/movies"><button className="Button btn btn-outline-primary display-inline">Review A Movie</button></a>
                         <br />
                         <hr />
                         <h3 className="text-center">Features</h3>

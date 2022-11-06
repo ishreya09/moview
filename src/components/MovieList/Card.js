@@ -1,5 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import '../../index.css';
+import "./MovieList.css"
 
 
 function Card(props) {

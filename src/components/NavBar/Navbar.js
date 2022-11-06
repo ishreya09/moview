@@ -1,7 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import Home from "./Home";
+import "./Navbar.css"
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import '../../index.css';
 
+
+import {Link} from "react-router-dom"
 
 
 function Navbar() {
@@ -18,24 +21,20 @@ function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item Button">
-                                    <a className="nav-link text-light" aria-current="page" to="/" href="/">Home</a>
+                                    <a className="nav-link text-light" aria-current="page" href="/">Home</a>
                             </li>
                             <li className="nav-item Button">
-                                    <a className="nav-link text-light" href="#">Movies</a>
+                                    <a className="nav-link text-light" href="/movies">Movies</a>
                             </li>
                             <li className="nav-item Button">
-                                    <a className="nav-link text-light" href="#">Contact Us</a>
+                                    <a className="nav-link text-light" href="/contactus">Contact Us</a>
                             </li>
                         </ul>
                         <form className="d-flex" role="search">
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                             <button className="Button btn btn-outline-dark text-light" type="submit">Search</button>
                         </form>
-                        {/* <Routes> */}
-                            {/* <Route exact path="/" element={<Home/>}/> */}
-                            {/* <Route path="/about" element={<About/>}/> */}
-                            {/* <Route path="/contact" element={<Contact/>}/> */}
-                        {/* </Routes> */}
+                        
                     </div>
                 </nav>
             </div>
