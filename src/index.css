@@ -30,7 +30,9 @@ h1{
 .Button{
   margin-left:3px;
   margin-right:3px;
+  font-size: 10px;
 }
 .Button:hover{
   font-weight: 500;
 }
+

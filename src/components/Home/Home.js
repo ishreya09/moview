@@ -1,9 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import classNames from "classnames";
+import { Link } from 'react-router-dom'
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import '../../index.css';
 import "./Home.css"
+import MovieList from "../MovieList/MovieList";
 
 
 const images = [
@@ -102,7 +104,6 @@ function CarouselSlideShow() {
 function About() {
     return (
         <div>
-            <h1 className="text-primary" style={{ fontSize: "100px", opacity: "90px" }}>MoVIEW</h1>
             <h3 className="text-start">About Us</h3>
             <p className="text-start">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum dolorum enim hic atque quos!
@@ -129,7 +130,7 @@ function About() {
                         <img src="https://images.pexels.com/photos/13350289/pexels-photo-13350289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="image1" style={{ height: "300px", width: "auto" }} />
                     </div>
                     <div className="col">
-                        <a href="/movies"><button className="Button btn btn-outline-primary display-inline">Review A Movie</button></a>
+                        <a href="/movies"><button className="Button btn btn-outline-primary">Review A Movie</button></a>
                         <br />
                         <hr />
                         <h3 className="text-center">Features</h3>
@@ -143,7 +144,7 @@ function About() {
                             <li>dsjcjdsbv</li>
                             <li>dsjcjdsbv</li>
                             <li>dsjcjdsbv</li>
-                            <li>dsjcjdsbv</li>  
+                            <li>dsjcjdsbv</li>
                         </ul>
                     </div>
                 </div>
@@ -152,13 +153,99 @@ function About() {
     );
 }
 
+function Popular() {
+    return (
+        <div className="container-fluid">
+            <div className="row">
+            <h1>Popular</h1>
+
+            </div>
+            <div className="row">
+            <MovieList /> 
+
+            </div>
+            <div className="row">
+
+            <Link to="/movies/popular" className="Button btn btn-primary text-decoration-none text-light">Click here to see more</Link> <br />
+            </div>
+            {/* Movielist will return only 4 elements */}
+            <hr />
+        </div>
+
+    );
+}
+
+function TopRated() {
+    return (
+        <div className="container-fluid">
+            <div className="row">
+            <h1>Top Rated</h1>
+
+            </div>
+            <div className="row">
+
+            <MovieList />
+            </div>
+            <div className="row">
+
+            <Link to="/movies/top-rated" className="Button btn btn-primary text-decoration-none text-light" >Click here to see more</Link><br />
+            </div>
+            <hr />
+        </div>
+    )
+}
+
+function Upcoming() {
+    return (
+        <div className="container-fluid">
+            <div className="row">
+
+            <h1>Upcoming</h1>
+            </div>
+            <div className="row">
+
+            <MovieList />
+            </div>
+            <div className="row">
+
+            <Link to="/movies/upcoming" className="Button btn btn-primary  text-decoration-none text-light">Click here to see more</Link><br />
+            </div>
+            <hr />
+        </div>
+    )
+}
+
 
 
 function Home() {
     return (
         <div className="Home">
-            <CarouselSlideShow></CarouselSlideShow>
-            <About></About>
+            <div className="MyCON container">
+                <div className="row">
+                    <div className="col">
+                        <h1 className="text-primary" style={{ fontSize: "100px", opacity: "90px" }}>MoVIEW</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores autem cupiditate placeat assumenda quaerat, ut eveniet expedita saepe voluptatem illum cum optio ipsum enim illo, consequatur porro omnis est repudiandae sed sint minima ratione alias? Accusamus quisquam tempora repellat excepturi! Natus dolorum porro eveniet fugiat, odit quis in eaque, rem libero voluptatem quas blanditiis ipsam voluptatum, officiis sit praesentium rerum! Quasi magnam corrupti laborum pariatur dignissimos illum excepturi. A, suscipit. Ab cupiditate ducimus quo ex, perspiciatis corporis quidem repellendus laudantium itaque cum quisquam nihil magnam necessitatibus illum.
+                            Eius, ad est quam sed, non nesciunt error delectus vitae porro quisquam doloremque.
+                        </p>
+                    </div>
+                    <div className="col">
+                        <CarouselSlideShow />
+                    </div>
+                </div>
+            </div>
+            <div className="MyCON container">
+                <Popular />
+            </div>
+            <div className="MyCON container">
+                <Upcoming />
+            </div>
+            <div className="MyCON container">
+                <TopRated />
+            </div>
+            <div className="MyCON container">
+                <About />
+            </div>
         </div>
     )
 }

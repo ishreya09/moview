@@ -1,0 +1,12 @@
+h1{
+    text-align: left;
+}
+
+.Home .MyCON{
+    display: flex;
+    flex-direction: row;
+}
+
+.Button:hover{
+    color:white;
+}

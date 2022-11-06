@@ -6,7 +6,7 @@ import Navbar from './components/NavBar/Navbar';
 import ReviewPage from './components/ReviewPage/ReviewPage';
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import ContactUs from './components/ContactUs/ContactUs';
-
+import ReviewMovie from './components/ReviewPage/ReviewMovie';
 
 function App() {
   var cast=[{id:"1",actor:"abc"},{id:"2",actor:"def"},{id:"3",actor:"efg"}];
@@ -17,7 +17,7 @@ function App() {
       <Router>
         <Routes>
           <Route index element={<Home></Home>}></Route>
-          <Route path="movie/:id" element={<ReviewPage></ReviewPage>}></Route>
+          <Route path="movie/:id" element={<ReviewMovie></ReviewMovie>}></Route>
           <Route path="/movies" element={<MovieList></MovieList>}></Route>
           <Route path="/movies/:type" element={<MovieList></MovieList>}></Route>
           <Route path="/contactus" element={<ContactUs></ContactUs>}></Route>
