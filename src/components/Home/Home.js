@@ -10,6 +10,7 @@ import MovieList from "../MovieList/MovieList";
 
 const images = [
     {
+        id:"1",
         url:
             "https://images.pexels.com/photos/10550714/pexels-photo-10550714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         alt: "movie1",
@@ -17,12 +18,14 @@ const images = [
         width: "auto"
     },
     {
+        id:"2",
         url: "https://images.pexels.com/photos/13756268/pexels-photo-13756268.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         alt: "movie2",
         height: "400px",
         width: "auto"
     },
     {
+        id:"3",
         url: "https://images.pexels.com/photos/11586575/pexels-photo-11586575.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         alt: "movie3",
         height: "400px",
