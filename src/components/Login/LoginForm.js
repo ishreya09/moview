@@ -40,14 +40,14 @@ class LoginForm extends React.Component {
         return (
             <div className="LoginForm container-fluid">
                 <h1>Login</h1>
-                <form>
+                <form method="post" action="/" onSubmit={this.onLogin}>
                     <div className="mb-3 text-start">
                         <label for="username" className="form-label text-muted ">Username</label>
-                        <input type="text" name="username" className="form-control" id="username" placeholder="username" />
+                        <input type="text" name="username" className="form-control" onChange={this.changeUsername} id="username" placeholder="username" />
                     </div>
                     <div className="mb-3 text-start">
                         <label for="password" className="form-label text-muted ">Password</label>
-                        <input type="text" name="password" className="form-control" id="password" placeholder="password" />
+                        <input type="password" name="password" className="form-control" id="password" onChange={this.changePassword} placeholder="password" />
                     </div>
                     
                     <input type="submit" className="btn btn-outline-primary" />
