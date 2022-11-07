@@ -31,7 +31,7 @@ class LoginForm extends React.Component {
             password: this.state.password
         }
         console.log(User);
-        document.cookie(User.username);
+        // document.cookie(User.username);
         window.location = "/";
 
     }
@@ -40,7 +40,7 @@ class LoginForm extends React.Component {
         return (
             <div className="LoginForm container-fluid">
                 <h1>Login</h1>
-                <form method="post" action="/" onSubmit={this.onLogin}>
+                <form method="post" onSubmit={this.onLogin}>
                     <div className="mb-3 text-start">
                         <label for="username" className="form-label text-muted ">Username</label>
                         <input type="text" name="username" className="form-control" onChange={this.changeUsername} id="username" placeholder="username" />
