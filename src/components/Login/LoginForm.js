@@ -43,14 +43,14 @@ class LoginForm extends React.Component {
                 <form method="post" onSubmit={this.onLogin}>
                     <div className="mb-3 text-start">
                         <label for="username" className="form-label text-muted ">Username</label>
-                        <input type="text" name="username" className="form-control" onChange={this.changeUsername} id="username" placeholder="username" />
+                        <input required type="text" name="username" className="form-control" onChange={this.changeUsername} id="username" placeholder="username" />
                     </div>
                     <div className="mb-3 text-start">
                         <label for="password" className="form-label text-muted ">Password</label>
                         <input type="password" name="password" className="form-control" id="password" onChange={this.changePassword} placeholder="password" />
                     </div>
                     
-                    <input type="submit" className="btn btn-outline-primary" /><br /><br />
+                    <input required type="submit" className="btn btn-outline-primary" /><br /><br />
                     <span>Don't have an Account,<a href="/signup" className="text-center" style={{textDecoration:"none"}}> Click here to sign up</a></span>
                 </form>
 
