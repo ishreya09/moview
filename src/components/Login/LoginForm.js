@@ -50,8 +50,10 @@ class LoginForm extends React.Component {
                         <input type="password" name="password" className="form-control" id="password" onChange={this.changePassword} placeholder="password" />
                     </div>
                     
-                    <input type="submit" className="btn btn-outline-primary" />
+                    <input type="submit" className="btn btn-outline-primary" /><br /><br />
+                    <span>Don't have an Account,<a href="/signup" className="text-center" style={{textDecoration:"none"}}> Click here to sign up</a></span>
                 </form>
+
             </div>
         );
     }
