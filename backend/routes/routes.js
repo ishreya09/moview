@@ -1,21 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const signupTemplate = require('../models/SignUpModels')
-const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 
 
 // Create User using :POST "/signup" Doesn't require Auth
-router.post('/signup', [
-    body('email', 'Enter a valid email id').isEmail(),
-    body('name', 'Enter a valid name').isLength({ min: 3 }),
-    body('password', 'Password must contain 8 letters').isLength({ min: 8 }),
-
-], (request, response) => {
-    const errors = validationResult(request);
-    if (!errors.isEmpty()) {
-        return response.status(400).json({ errors: errors.array() });
-    }
+router.post('/signup', (request, response) => {
     var pass = "";
     // encrypting the password using a salt
     var bcrypt = require('bcryptjs');
