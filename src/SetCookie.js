@@ -1,6 +1,7 @@
 import Cookies from 'js-cookie';
 
 function SetCookie(){
+    Cookies.set('id', '', { expires: 30 });
     Cookies.set('name', '', { expires: 30 });
     Cookies.set('username', 'AnonymousUser', { expires: 30 });
     Cookies.set('role', 'basic', { expires: 30 });
