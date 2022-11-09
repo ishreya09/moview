@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const signupTemplate = require('../models/SignUpModels')
+const contactusTemplate = require('../models/ContactModels')
 const bcrypt = require('bcryptjs');
 
 
@@ -46,5 +47,20 @@ router.post('/signup', (request, response) => {
 
 });
 
+router.post('/contactus', (request, response) => {
+    const ContactUser = new contactusTemplate({
+        name: request.body.name,
+        email: request.body.email,
+        message: request.body.message,
+    })
 
+    ContactUser.save()
+    .then(data=>{
+        response.json(data);
+    })
+    .catch(err=>{
+        response.json(err);
+    })
+
+});
 module.exports = router;

@@ -1,6 +1,7 @@
 import React from "react";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import '../../index.css';
+import axios from "axios";
 
 
 class ContactUs extends React.Component {
@@ -36,8 +37,14 @@ class ContactUs extends React.Component {
             email:this.state.email,
             message:this.state.message,
         }
-        console.log(contactUser);
-        window.location="/contactus/thank-you";
+        axios.post("http://localhost:4000/contactus",contactUser)
+            .then(response=>{
+                window.location="/contactus/thank-you";
+            })
+            .catch(error=>{
+                alert("Please fill the all the fields correctly");
+            })
+        
         
     }
 
@@ -52,15 +59,15 @@ class ContactUs extends React.Component {
                 <form method="post" onSubmit={this.onContactSubmit}>
                     <div className="mb-3 text-start">
                         <label for="name" className="form-label text-muted ">Your Name</label>
-                        <input type="text" name="name" className="form-control" onChange={this.changeName} id="name" placeholder="John Doe" />
+                        <input required type="text" name="name" className="form-control" onChange={this.changeName} id="name" placeholder="John Doe" />
                     </div>
                     <div className="mb-3 text-start">
                         <label for="email" className="form-label text-muted ">Email address</label>
-                        <input type="email" name="email" className="form-control" id="email" onChange={this.changeEmail} placeholder="name@example.com" />
+                        <input required type="email" name="email" className="form-control" id="email" onChange={this.changeEmail} placeholder="name@example.com" />
                     </div>
                     <div className="mb-3 text-start">
                         <label for="message" className="form-label text-muted ">Message</label>
-                        <textarea className="form-control" onChange={this.changeMessage} name="message" id="message" rows="4"></textarea>
+                        <textarea required className="form-control" onChange={this.changeMessage} name="message" id="message" rows="4"></textarea>
                     </div>
                     <input type="submit" className="btn btn-outline-primary" />
                 </form>
