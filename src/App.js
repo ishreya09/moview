@@ -10,10 +10,18 @@ import ReviewMovie from './components/ReviewPage/ReviewMovie';
 import LoginForm from './components/Login/LoginForm';
 import SignupForm from './components/SignUp/SignupForm';
 import ThankYou from './components/ContactUs/ThankYou';
+import Logout from './components/Logout/Logout';
+import Cookies from 'js-cookie';
+import SetCookie from './SetCookie';
 
 function App() {
-  var cast=[{id:"1",actor:"abc"},{id:"2",actor:"def"},{id:"3",actor:"efg"}];
-  var review=[{id:"1",review:"movie is great"},{id:"2",review:"movie is great"},{id:"3",review:"movie is great"} ]
+  var cast = [{ id: "1", actor: "abc" }, { id: "2", actor: "def" }, { id: "3", actor: "efg" }];
+  var review = [{ id: "1", review: "movie is great" }, { id: "2", review: "movie is great" }, { id: "3", review: "movie is great" }]
+
+  if(Cookies.get('username') == undefined){
+    SetCookie();
+  }
+
   return (
     <div className="App">
       <Navbar></Navbar>
@@ -27,6 +35,7 @@ function App() {
           <Route path="/contactus/thank-you" element={<ThankYou></ThankYou>}></Route>
           <Route path="/signup" element={<SignupForm ></SignupForm>}></Route>
           <Route path="/login" element={<LoginForm></LoginForm>}></Route>
+          <Route path="/logout" element={<Logout />}></Route>
           <Route path="/*" element={<h1>404: Page Not Found</h1>}></Route>
 
         </Routes>

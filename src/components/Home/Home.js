@@ -6,6 +6,7 @@ import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import '../../index.css';
 import "./Home.css"
 import MovieList from "../MovieList/MovieList";
+import Cookie from "js-cookie";
 
 
 const images = [
@@ -221,6 +222,7 @@ function Upcoming() {
 
 
 function Home() {
+
     return (
         <div className="Home">
             <div className="MyCON container">
@@ -231,8 +233,21 @@ function Home() {
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores autem cupiditate placeat assumenda quaerat, ut eveniet expedita saepe voluptatem illum cum optio ipsum enim illo, consequatur porro omnis est repudiandae sed sint minima ratione alias? Accusamus quisquam tempora repellat excepturi! Natus dolorum porro eveniet fugiat, odit quis in eaque, rem libero voluptatem quas blanditiis ipsam voluptatum, officiis sit praesentium rerum! Quasi magnam corrupti laborum pariatur dignissimos illum excepturi. A, suscipit. Ab cupiditate ducimus quo ex, perspiciatis corporis quidem repellendus laudantium itaque cum quisquam nihil magnam necessitatibus illum.
                             Eius, ad est quam sed, non nesciunt error delectus vitae porro quisquam doloremque.
                         </p>
+                        {
+                        Cookie.get('username')=="AnonymousUser" ?
+                        (
+                        <>
                         <a href="/signup" className="Button btn btn-outline-primary">Sign Up</a>
                         <a href="/login" className="Button btn btn-outline-primary">Login</a>
+                        </>
+                        )
+                        :(
+                        <>
+                        <h6 className="text-center text-primary">Hello {Cookie.get('name')}</h6>
+                        <a href="/logout" className="Button btn btn-outline-primary">Logout</a>
+                        </>
+                        )
+                        }
                     </div>
                     <div className="col">
                         <CarouselSlideShow />
