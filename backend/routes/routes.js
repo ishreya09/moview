@@ -9,7 +9,6 @@ const bcrypt = require('bcryptjs');
 router.post('/signup', (request, response) => {
     var pass = "";
     // encrypting the password using a salt
-    var bcrypt = require('bcryptjs');
     bcrypt.genSalt(10, function (err, salt) {
         bcrypt.hash(request.body.password, salt, function (err, hash) {
             // Store hash in your password DB.
@@ -55,12 +54,37 @@ router.post('/contactus', (request, response) => {
     })
 
     ContactUser.save()
-    .then(data=>{
-        response.json(data);
-    })
-    .catch(err=>{
-        response.json(err);
-    })
+        .then(data => {
+            response.json(data);
+        })
+        .catch(err => {
+            response.json(err);
+        })
 
 });
+
+router.post('/login', (request, response) => {
+    const user = {
+        username: request.body.username,
+    };
+
+    signupTemplate.findOne(user)
+        .then((user) => {
+            // user exists
+            // response.json(user);
+            if (bcrypt.compareSync(request.body.password, user.password)) {
+                response.json(user);
+            }
+            else {
+                response.status(400).json({ sucess: "false", msg: "Invalid password" });
+            }
+        })
+
+        // response.json({hash:hash, pass:user.password })
+
+        .catch((error) => {
+            response.status(400).json(error);
+        })
+})
+
 module.exports = router;
