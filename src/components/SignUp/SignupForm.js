@@ -50,7 +50,7 @@ class SignupForm extends React.Component {
 
             })
             .catch(error=>{
-                // alert (error.response.data);
+                alert (error);
                 alert ("Username taken!! Please try again!");
             })
 

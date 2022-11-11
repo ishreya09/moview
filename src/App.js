@@ -13,6 +13,7 @@ import ThankYou from './components/ContactUs/ThankYou';
 import Logout from './components/Logout/Logout';
 import Cookies from 'js-cookie';
 import SetCookie from './SetCookie';
+import AdminContact from './components/Admin/AdminContactTable';
 
 function App() {
   var cast = [{ id: "1", actor: "abc" }, { id: "2", actor: "def" }, { id: "3", actor: "efg" }];
@@ -34,6 +35,8 @@ function App() {
           <Route path="/contactus" element={<ContactUs></ContactUs>}></Route>
           <Route path="/contactus/thank-you" element={<ThankYou></ThankYou>}></Route>
           <Route path="/signup" element={<SignupForm ></SignupForm>}></Route>
+          <Route path="/admin/contacttable" element={<AdminContact />}></Route>
+
           <Route path="/login" element={<LoginForm></LoginForm>}></Route>
           <Route path="/logout" element={<Logout />}></Route>
           <Route path="/*" element={<h1>404: Page Not Found</h1>}></Route>

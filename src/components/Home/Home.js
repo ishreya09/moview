@@ -11,7 +11,7 @@ import Cookie from "js-cookie";
 
 const images = [
     {
-        id:"1",
+        id: "1",
         url:
             "https://images.pexels.com/photos/10550714/pexels-photo-10550714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         alt: "movie1",
@@ -19,14 +19,14 @@ const images = [
         width: "auto"
     },
     {
-        id:"2",
+        id: "2",
         url: "https://images.pexels.com/photos/13756268/pexels-photo-13756268.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         alt: "movie2",
         height: "400px",
         width: "auto"
     },
     {
-        id:"3",
+        id: "3",
         url: "https://images.pexels.com/photos/11586575/pexels-photo-11586575.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         alt: "movie3",
         height: "400px",
@@ -161,16 +161,16 @@ function Popular() {
     return (
         <div className="container-fluid">
             <div className="row">
-            <h1>Popular</h1>
+                <h1>Popular</h1>
 
             </div>
             <div className="row">
-            <MovieList /> 
+                <MovieList />
 
             </div>
             <div className="row">
 
-            <Link to="/movies/popular" className="Button btn btn-primary text-decoration-none text-light">Click here to see more</Link> <br />
+                <Link to="/movies/popular" className="Button btn btn-primary text-decoration-none text-light">Click here to see more</Link> <br />
             </div>
             {/* Movielist will return only 4 elements */}
             <hr />
@@ -183,16 +183,16 @@ function TopRated() {
     return (
         <div className="container-fluid">
             <div className="row">
-            <h1>Top Rated</h1>
+                <h1>Top Rated</h1>
 
             </div>
             <div className="row">
 
-            <MovieList />
+                <MovieList />
             </div>
             <div className="row">
 
-            <Link to="/movies/top-rated" className="Button btn btn-primary text-decoration-none text-light" >Click here to see more</Link><br />
+                <Link to="/movies/top-rated" className="Button btn btn-primary text-decoration-none text-light" >Click here to see more</Link><br />
             </div>
             <hr />
         </div>
@@ -204,15 +204,15 @@ function Upcoming() {
         <div className="container-fluid">
             <div className="row">
 
-            <h1>Upcoming</h1>
+                <h1>Upcoming</h1>
             </div>
             <div className="row">
 
-            <MovieList />
+                <MovieList />
             </div>
             <div className="row">
 
-            <Link to="/movies/upcoming" className="Button btn btn-primary  text-decoration-none text-light">Click here to see more</Link><br />
+                <Link to="/movies/upcoming" className="Button btn btn-primary  text-decoration-none text-light">Click here to see more</Link><br />
             </div>
             <hr />
         </div>
@@ -234,19 +234,28 @@ function Home() {
                             Eius, ad est quam sed, non nesciunt error delectus vitae porro quisquam doloremque.
                         </p>
                         {
-                        Cookie.get('username')=="AnonymousUser" ?
-                        (
-                        <>
-                        <a href="/signup" className="Button btn btn-outline-primary">Sign Up</a>
-                        <a href="/login" className="Button btn btn-outline-primary">Login</a>
-                        </>
-                        )
-                        :(
-                        <>
-                        <h6 className="text-center text-primary">Hello {Cookie.get('name')}</h6>
-                        <a href="/logout" className="Button btn btn-outline-primary">Logout</a>
-                        </>
-                        )
+                            Cookie.get('username') == "AnonymousUser" ?
+                                (
+                                    <>
+                                        <a href="/signup" className="Button btn btn-outline-primary">Sign Up</a>
+                                        <a href="/login" className="Button btn btn-outline-primary">Login</a>
+                                    </>
+                                )
+                                : (
+                                    <>
+                                        {Cookie.get('role') == "admin" ?
+                                            (
+                                                <>
+                                                    <a href="/admin" className="Button btn btn-outline-primary">Admin Settings</a>
+                                                </>
+                                            ) : (
+                                                <>
+                                                </>
+                                            )}
+                                        <h6 className="text-center text-primary">Hello {Cookie.get('name')}</h6>
+                                        <a href="/logout" className="Button btn btn-outline-primary">Logout</a>
+                                    </>
+                                )
                         }
                     </div>
                     <div className="col">
