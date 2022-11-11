@@ -3,7 +3,6 @@ const router = express.Router();
 const signupTemplate = require('../models/SignUpModels')
 const contactusTemplate = require('../models/ContactModels')
 const bcrypt = require('bcryptjs');
-const { Routes } = require('react-router-dom');
 
 
 // Create User using :POST "/signup" Doesn't require Auth
@@ -88,6 +87,6 @@ router.post('/login', (request, response) => {
         })
 })
 
-router.get('/admin')
+// router.get('/admin')
 
 module.exports = router;

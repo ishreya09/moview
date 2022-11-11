@@ -7,7 +7,7 @@ const cors =require('cors');
 const app =express();
 
 dotenv.config();    
-mongoose.connect(process.env.USER_ACCESS,()=>console.log("User Database Connected"))
+mongoose.connect(process.env.USER_ACCESS,()=>console.log("Database Connected"))
 
 app.use(express.json());
 app.use(cors());
