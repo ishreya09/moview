@@ -243,6 +243,7 @@ function Home() {
                                 )
                                 : (
                                     <>
+                                        <h6 className="text-center text-primary">Hello {Cookie.get('name')}</h6>
                                         {Cookie.get('role') == "admin" ?
                                             (
                                                 <>
@@ -252,7 +253,6 @@ function Home() {
                                                 <>
                                                 </>
                                             )}
-                                        <h6 className="text-center text-primary">Hello {Cookie.get('name')}</h6>
                                         <a href="/logout" className="Button btn btn-outline-primary">Logout</a>
                                     </>
                                 )

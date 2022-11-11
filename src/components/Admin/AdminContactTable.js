@@ -1,10 +1,11 @@
+import axios from "axios";
 import React, { Component, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 
 class AdminContact extends React.Component {
     constructor() {
         super();
-
+        // axios.get()        
 
     }
 
@@ -23,11 +24,10 @@ class AdminContact extends React.Component {
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>23rd Jan</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <th scope="row">23rd Jan</th>
+                            <td>Mark Otto</td>
+                            <td>Otto@gmail.com</td>
+                            <td>@mshfefhsdo</td>
                         </tr>
 
                     </tbody>
