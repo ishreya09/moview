@@ -3,7 +3,7 @@ import React from "react"
 import Cookie from 'js-cookie';
 
 
-class AdminMovie extends React.Component {
+class Admin extends React.Component {
     constructor() {
         super();
         // axios.get()        
@@ -18,7 +18,7 @@ class AdminMovie extends React.Component {
                     Cookie.get("role") == "admin" ?
                         (
                             <div className="container-fluid">
-                                <h1>Hello {Cookie.get("name")}</h1>
+                                <h1 className="text-center">Hello {Cookie.get("name")}</h1>
                                 <a href="/admin/contacttable" className="Button btn btn-outline-primary">Contact Info</a>
                                 <a href="/admin/usertable" className="Button btn btn-outline-primary">UserInfo</a>
                                 <a href="/admin/movietable" className="Button btn btn-outline-primary">Movie Info</a>
@@ -35,3 +35,5 @@ class AdminMovie extends React.Component {
         )
     }
 }
+
+export default Admin;

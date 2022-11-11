@@ -29,7 +29,7 @@ class AdminMovie extends React.Component {
                             <th scope="col">Censor Board Rating</th>
                             <th scope="col">Category</th>
                             <th scope="col">Platform available</th>
-                            <th scope="col">Now Playing</th>
+                            <th scope="col">In Theatres</th>
                         </tr>
                     </thead>
                     <tbody>
