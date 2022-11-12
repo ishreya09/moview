@@ -1,10 +1,6 @@
 const mongoose = require('mongoose');
 
 const movieTemplate = new mongoose.Schema({
-    metadescription:{
-        type:String,
-        required:true,
-    },
     title:{
         type:String,
         required:true,
@@ -17,27 +13,23 @@ const movieTemplate = new mongoose.Schema({
         type:String,
         required:true,
     },
+    metadescription:{
+        type:String,
+        required:true,
+    },
     summary:{
         type:String,
         required:true,
     },
     cast:[{
         role:String,
-        name:String,    }],
-    reviewsArray:[{
-        username:String,
-        rating:Number,
-        reviews:String,    }],
+        name:String,    
+    }],
     genre:{
         type:Array,
-        default:undefined,
     },
     language:{
         type:String,
-        required:true,
-    },
-    rating:{
-        type:Number,
         required:true,
     },
     duration:{
@@ -49,8 +41,8 @@ const movieTemplate = new mongoose.Schema({
         default:"U/A",
     },
     inTheatres:{
-        type:Boolean,
-        required:false,
+        type:String,
+        required:true,
     },
     BookMyShowLink:{
         type:String,
@@ -61,9 +53,26 @@ const movieTemplate = new mongoose.Schema({
         required:true,
     },
     platforms:[{
-        name:String,    }],
+        name:String,    
+    }],
     category:[{
-        categoryType:String,    }],
+        name:String,    
+    }],
+    releaseDate:{
+        type:"String",
+        required:true
+    },
+    
+    rating:{
+        type:Number,
+        required:true,
+        default:0,
+    },
+    reviewsArray:[{
+        username:String,
+        rating:Number,
+        reviews:String,    
+    }],
     date:{
         type:Date,
         default:Date.now(),

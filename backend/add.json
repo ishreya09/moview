@@ -1,0 +1,73 @@
+
+{
+    "title":"Wakanda Forever",
+    "image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.marvel.com%2Farticles%2Fmovies%2Flisten-now-black-panther-wakanda-forever-music-from-and-inspired-by-soundtrack-out-now&psig=AOvVaw3nULUSLjXV4vO59DxebpR0&ust=1668327269459000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCKjE-8WZqPsCFQAAAAAdAAAAABAI",
+    "trailer":"https://youtu.be/_Z3QKkl1WyM",
+    "metadescription":"well no clue yet...",
+    "summary":"still not sure about the story",
+    "cast":[
+        {
+        "role":"actor",
+        "actor":"M Baku"
+        },
+        {
+        "role":"actor",
+        "actor":"Winston Duke"
+        },
+        {
+        "role":"actor",
+        "actor":"Shuri"
+        },
+        {
+        "role":"actor",
+        "actor":"Letitia Wright"
+        },
+        {
+        "role":"actor",
+        "actor":"Aneka"
+        },
+        {
+        "role":"actor",
+        "actor":"Micheal Coel"
+        }
+        ],
+    "genre":["Superhero","Action","Science Fiction"],
+    "language":"English",
+    "duration":"161 mins",
+    "censorBoardRating":"U/A",
+    "inTheatres":"true",
+    "BookMyShowLink":"https://in.bookmyshow.com/mumbai-western/movies/black-panther-wakanda-forever/ET00310792",
+    "releaseDate":"11th November 2022",
+    "platforms":[
+        {
+            "name":"Amazon Prime"
+        }
+    ],
+    "category":[
+        {
+        "name":"Intheatre"
+        },
+        {
+        "name":"Popular"
+        }
+        ],
+    "rating":0,
+    "reviewsArray":[
+        {
+            "username":"bdshbhfbs",
+            "rating" : 2.4,
+            "review":"sfsbfjs"
+        },
+        {
+            "username":"bdshjdfnbbhfbs",
+            "rating" : 5,
+            "review":"sfsbfjs"
+        },
+        {
+            "username":"shres",
+            "rating" : 4,
+            "review":"sfdfdsbfjs"
+        }
+        
+    ]
+}

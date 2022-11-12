@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const signupTemplate = require('../models/SignUpModels')
+const movieTemplate= require('../models/MovieModels')
 const contactusTemplate = require('../models/ContactModels')
 const bcrypt = require('bcryptjs');
+const MovieModels = require('../models/MovieModels');
 
 
 // Create User using :POST "/signup" Doesn't require Auth
@@ -87,6 +89,34 @@ router.post('/login', (request, response) => {
         })
 })
 
-// router.get('/admin')
+router.get('/admin/addmovie',(request,response)=>{
+    const movie = new movieTemplate({
+        title: request.body.title,
+        image:request.body.image,
+        trailer:request.body.trailer,
+        metadescription:request.body.metadescription,
+        summary: request.body.summary,
+        cast: request.body.cast,
+        genre: request.body.genre,
+        language:request.body.language,
+        duration:request.body.duration,
+        censorBoardRating: request.body.censorBoardRating,
+        inTheatres: request.body.inTheatres,
+        BookMyShowLink: request.body.BookMyShowLink,
+        platforms:request.body.platforms,
+        category:request.body.category,
+        reviewArray : request.body.reviewArray,
+        releaseDate:request.body.releaseDate,
+        rating:request.body.rating,
+
+    })
+    movie.save()
+    .then(data=>{
+        response.json(data)
+    })
+    .catch(err=>{
+        response.json(err)
+    })
+})
 
 module.exports = router;
