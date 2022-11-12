@@ -21,17 +21,13 @@ const movieTemplate = new mongoose.Schema({
         type:String,
         required:true,
     },
-    cast:{
-        role:[String],
-        name:[String],
-        default:undefined,
-    },
-    reviewsArray:{
-        username:[String],
-        rating:[Number],
-        reviews:[String],
-        default:undefined,
-    },
+    cast:[{
+        role:String,
+        name:String,    }],
+    reviewsArray:[{
+        username:String,
+        rating:Number,
+        reviews:String,    }],
     genre:{
         type:Array,
         default:undefined,
@@ -49,8 +45,8 @@ const movieTemplate = new mongoose.Schema({
         required:true,
     },
     censorBoardRating:{
-        type:Array,
-        default:undefined,
+        type:String,
+        default:"U/A",
     },
     inTheatres:{
         type:Boolean,
@@ -64,14 +60,10 @@ const movieTemplate = new mongoose.Schema({
         type:String,
         required:true,
     },
-    platforms:{
-        type:Array,
-        default:undefined,
-    },
-    category:{
-        type:Array,
-        required:true,
-    },
+    platforms:[{
+        name:String,    }],
+    category:[{
+        categoryType:String,    }],
     date:{
         type:Date,
         default:Date.now(),

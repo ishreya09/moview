@@ -1,0 +1,22 @@
+POST http://localhost:4000/admin/addMovie
+Content-Type: application/json
+
+{
+    "title":"Wakanda Forever",
+    "metadescription":"well no clue yet...",
+    "image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.marvel.com%2Farticles%2Fmovies%2Flisten-now-black-panther-wakanda-forever-music-from-and-inspired-by-soundtrack-out-now&psig=AOvVaw3nULUSLjXV4vO59DxebpR0&ust=1668327269459000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCKjE-8WZqPsCFQAAAAAdAAAAABAI",
+    "trailer":"https://youtu.be/_Z3QKkl1WyM",
+    "summary":"still not sure about the story",
+    "cast":"'M Baku','Winston Duke','Shuri','Letitia Wright','Aneka','Micheal Coel'",
+    "reviewsArray":"'blackbear','10','Nice experience...','user1','7.8','Worth the time but plot could be better'",
+    "genre":"Superhero,Action,Science Fiction",
+    "language":"English",
+    "rating":"8.9",
+    "duration":"161 mins",
+    "censorBoardRating":"U/A",
+    "inTheatres":"{true}",
+    "BookMyShowLink":"https://in.bookmyshow.com/mumbai-western/movies/black-panther-wakanda-forever/ET00310792",
+    "releaseDate":"11th November 2022",
+    "platforms":"none",
+    "category":"Latest",
+}
