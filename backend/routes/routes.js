@@ -110,6 +110,8 @@ router.get('/admin/addmovie',(request,response)=>{
         rating:request.body.rating,
 
     })
+
+    console.log(movie);
     movie.save()
     .then(data=>{
         response.json(data)

@@ -17,6 +17,7 @@ import AdminContact from './components/Admin/AdminContactTable';
 import AdminUser from './components/Admin/AdminUserTable';
 import AdminMovie from './components/Admin/AdminMovieTable';
 import Admin from './components/Admin/Admin';
+import AddMovieForm from './components/Admin/AdminAddMovie';
 
 function App() {
   var cast = [{ id: "1", actor: "abc" }, { id: "2", actor: "def" }, { id: "3", actor: "efg" }];
@@ -42,6 +43,7 @@ function App() {
           <Route path="/admin/contacttable" element={<AdminContact />}></Route>
           <Route path="/admin/movietable" element={<AdminMovie />}></Route>
           <Route path="/admin/usertable" element={<AdminUser />}></Route>
+          <Route path="/admin/addmovie" element={<AddMovieForm />}></Route>
           <Route path="/login" element={<LoginForm></LoginForm>}></Route>
           <Route path="/logout" element={<Logout />}></Route>
           <Route path="/*" element={<h1>404: Page Not Found</h1>}></Route>

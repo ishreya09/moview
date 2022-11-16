@@ -46,7 +46,6 @@ const movieTemplate = new mongoose.Schema({
     },
     BookMyShowLink:{
         type:String,
-        required:true,
     },
     releaseDate:{
         type:String,
