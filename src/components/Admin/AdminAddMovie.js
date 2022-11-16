@@ -14,7 +14,6 @@ class AddMovieForm extends React.Component {
             trailer: "",
             summary: "",
             cast: "",
-            roles:"",
             genre: "",
             language: "",
             rating: "",
@@ -34,7 +33,6 @@ class AddMovieForm extends React.Component {
         this.changeTrailer = this.changeTrailer.bind(this);
         this.changeSummary = this.changeSummary.bind(this);
         this.changeCast = this.changeCast.bind(this);
-        this.changeRoles= this.changeRoles.bind(this);
         this.changeLanguage = this.changeLanguage.bind(this);
         this.changeGenre = this.changeGenre.bind(this);
         this.changeRating = this.changeRating.bind(this);
@@ -66,9 +64,7 @@ class AddMovieForm extends React.Component {
     changeCast = (event) => {
         this.setState({ cast: event.target.value });
     }
-    changeRoles = (event) => {
-        this.setState({ roles: event.target.value });
-    }
+    
     changeLanguage = (event) => {
         this.setState({ language: event.target.value });
     }
@@ -110,23 +106,22 @@ class AddMovieForm extends React.Component {
         var category_arr= this.state.category.split(",");
         var platforms_arr= this.state.platforms.split(",");
         var cast=[];
-        for (var i=0; i<cast_arr.length();i++){
+        for (var i=0; i<cast_arr.length;i++){
             let obj={
-                role:roles_arr[i],
-                actor:cast_arr[i]
+                name:cast_arr[i]
             }
             cast.push(obj);
         }
         var genre= this.state.genre.split(",");
         var platforms=[];
-        for(i=0;i<platforms_arr.length();i++){
+        for(i=0;i<platforms_arr.length;i++){
             let obj = {
                 name:platforms_arr[i]
             }
             platforms.push(obj)
         }
         var category=[];
-        for(i=0;i<category_arr.length();i++){
+        for(i=0;i<category_arr.length;i++){
             let obj = {
                 name:category_arr[i]
             }
@@ -159,7 +154,7 @@ class AddMovieForm extends React.Component {
 
         axios.post("http://localhost:4000/admin/addmovie", Movie)
             .then(response => {
-                console.log(response.data);
+                alert(response.data);
                 window.location = "/admin";
 
             })
@@ -198,10 +193,6 @@ class AddMovieForm extends React.Component {
                                     <div className="mb-3 text-start">
                                         <label for="summary" className="form-label text-muted ">Summary</label>
                                         <input required type="text" name="summary" onChange={this.changeSummary} value={this.state.summary} className="form-control" id="summary" placeholder="Movie Summary" />
-                                    </div>
-                                    <div className="mb-3 text-start">
-                                        <label for="roles" className="form-label text-muted ">Roles</label>
-                                        <input required type="text" name="roles" onChange={this.changeRoles} value={this.state.roles} className="form-control" id="cast" placeholder="Movie Cast Roles (seperate list by comma)" />
                                     </div>
                                     <div className="mb-3 text-start">
                                         <label for="cast" className="form-label text-muted ">Cast</label>

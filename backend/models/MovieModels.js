@@ -22,7 +22,6 @@ const movieTemplate = new mongoose.Schema({
         required:true,
     },
     cast:[{
-        role:String,
         name:String,    
     }],
     genre:{

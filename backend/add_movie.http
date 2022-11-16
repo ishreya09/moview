@@ -1,4 +1,4 @@
-GET http://localhost:4000/admin/addmovie
+POST http://localhost:4000/admin/addmovie
 Content-Type: application/json
 
 
@@ -10,28 +10,22 @@ Content-Type: application/json
     "summary":"still not sure about the story",
     "cast":[
         {
-        "role":"actor",
-        "actor":"M Baku"
+        "name":"M Baku"
         },
         {
-        "role":"actor",
-        "actor":"Winston Duke"
+        "name":"Winston Duke"
         },
         {
-        "role":"actor",
-        "actor":"Shuri"
+        "name":"Shuri"
         },
         {
-        "role":"actor",
-        "actor":"Letitia Wright"
+        "name":"Letitia Wright"
         },
         {
-        "role":"actor",
-        "actor":"Aneka"
+        "name":"Aneka"
         },
         {
-        "role":"actor",
-        "actor":"Micheal Coel"
+        "name":"Micheal Coel"
         }
         ],
     "genre":["Superhero","Action","Science Fiction"],

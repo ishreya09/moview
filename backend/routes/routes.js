@@ -89,7 +89,7 @@ router.post('/login', (request, response) => {
         })
 })
 
-router.get('/admin/addmovie',(request,response)=>{
+router.post('/admin/addmovie',(request,response)=>{
     const movie = new movieTemplate({
         title: request.body.title,
         image:request.body.image,
