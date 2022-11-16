@@ -116,11 +116,11 @@ class AddMovieForm extends React.Component {
             
 
         }
-        axios.post("http://localhost:4000/admin", addMovieAdmin)
+        axios.post("http://localhost:4000/admin/addmovie", addMovieAdmin)
             .then(response => {
 
                 // alert("page exists");
-                window.location = "/addMovie";
+                window.location = "/admin";
 
             })
             .catch(error=>{
