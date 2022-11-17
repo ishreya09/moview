@@ -49,22 +49,8 @@ Content-Type: application/json
         }
         ],
     "rating":0,
-    "reviewsArray":[
-        {
-            "username":"bdshbhfbs",
-            "rating" : 2.4,
-            "review":"sfsbfjs"
-        },
-        {
-            "username":"bdshjdfnbbhfbs",
-            "rating" : 5,
-            "review":"sfsbfjs"
-        },
-        {
-            "username":"shres",
-            "rating" : 4,
-            "review":"sfdfdsbfjs"
-        }
-        
-    ]
+
+    "username":["bdshbhfbs"],
+    "rating_user" : [2.4],
+    "review":["sfsbfjs"]
 }

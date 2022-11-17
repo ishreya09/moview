@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const ReviewModels = require('./ReviewModels').schema;
 
 const movieTemplate = new mongoose.Schema({
     title:{
@@ -66,11 +67,18 @@ const movieTemplate = new mongoose.Schema({
         required:true,
         default:0,
     },
-    reviewsArray:[{
-        username:String,
-        rating:Number,
-        reviews:String,    
-    }],
+    // reviewArray:{
+    //     type:[ReviewModels]
+    // },
+    username:{
+        type:[String],
+    },
+    review:{
+        type:[String],
+    },
+    rating_user:{
+        type:[Number],
+    },
     date:{
         type:Date,
         default:Date.now(),
