@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const ReviewModels = require('./ReviewModels').schema;
-
+//MOVIE SCHEMA
 const movieTemplate = new mongoose.Schema({
     title:{
         type:String,
