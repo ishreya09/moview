@@ -110,9 +110,9 @@ router.post('/admin/addmovie',(request,response)=>{
             category:request.body.category,
             releaseDate:request.body.releaseDate,
             rating:request.body.rating,
-            username: request.body.username,
-            rating_user: request.body.rating_user,
-            review:request.body.review,
+            // username: request.body.username,
+            // rating_user: request.body.rating_user,
+            // review:request.body.review,
         
         })
     

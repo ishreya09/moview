@@ -102,7 +102,7 @@ class AddMovieForm extends React.Component {
         event.preventDefault();
 
         var cast_arr= this.state.cast.split(",");
-        var roles_arr= this.state.roles.split(",");
+        // var roles_arr= this.state.roles.split(",");
         var category_arr= this.state.category.split(",");
         var platforms_arr= this.state.platforms.split(",");
         var cast=[];
@@ -149,7 +149,9 @@ class AddMovieForm extends React.Component {
             platforms:platforms,
             category:category,
             rating: this.state.rating,
-            reviewArray:[{}],
+            // username:[],
+            // review:[],
+            // rating_user:[]
         };
 
         axios.post("http://localhost:4000/admin/addmovie", Movie)
@@ -192,7 +194,7 @@ class AddMovieForm extends React.Component {
                                     </div>
                                     <div className="mb-3 text-start">
                                         <label for="summary" className="form-label text-muted ">Summary</label>
-                                        <input required type="text" name="summary" onChange={this.changeSummary} value={this.state.summary} className="form-control" id="summary" placeholder="Movie Summary" />
+                                        <textarea required type="text" name="summary" onChange={this.changeSummary} value={this.state.summary} className="form-control" id="summary" placeholder="Movie Summary" rows={"3"}></textarea>
                                     </div>
                                     <div className="mb-3 text-start">
                                         <label for="cast" className="form-label text-muted ">Cast</label>
