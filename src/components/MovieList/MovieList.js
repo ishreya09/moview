@@ -15,9 +15,9 @@ class MovieList extends React.Component {
     componentDidMount() {
         axios.get("http://localhost:4000/movie/movies")
             .then((res) => {
-                alert(res.data[0].title)
+                // alert(res.data[0].title)
                 this.setState({ movie: (res.data) }, () => {
-                    alert(this.state.movie);
+                    // alert(this.state.movie);
                 });
             })
 
