@@ -29,84 +29,131 @@ class ReviewForm extends React.Component {
 }
 
 
-function ReviewPage(props) {
-    // const cast = props.cast.map((x,i)=>
-    //         <li key={i}>{x.name}</li>
-    //         );
-    return (
-        <div className="ReviewPage">
-            <div className="container text-center">
-                <h1 className="text-start text-primary MovieTitle">{props.title}</h1>
-                <p className="text-start text-muted" style={{ fontSize: "20px" }}>Genre: {props.genre} | Language: {props.language} | Rating : {props.rating} | Duration : {props.duration} </p>
-                <div className="row">
-                    <div className="col text-start">
-                        <img src={props.image} className="MovieImage" alt="image"></img>
-                    </div>
-                    <div className="col text-start">
-                        <iframe className="MovieTrailer" src={props.video}
-                            title="MovieTrailer" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <h1 className="text-start">Summary</h1>
-                        <p className="text-start">{props.summary}</p>
+class ReviewPage extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            cast: [],
+            category: [],
+            platforms: [],
 
-                    </div>
-                    <div className="col">
+        }
 
-                        
-                        <h1 className="text-start">Cast</h1>
-                        <ul className="text-start MovieCast">
-                             
-                            <li>abc</li>
-                            <li>abc</li>
-                            <li>abc</li>
-                            <li>abc</li>
-                            <li>abc</li>
+    }
+    componentDidMount() {
+
+        this.setState({ cast: this.props.cast, platforms: this.props.platforms, category: this.props.category }, () => {
+            // alert (this.state.cast[0].name)
+        });
+    }
+    render() {
+
+        return (
+            <div className="ReviewPage">
+                <div className="container text-center">
+                    <h1 className="text-start text-primary MovieTitle">{this.props.title}</h1>
+                    <p className="text-start text-muted" style={{ fontSize: "20px" }}> {this.props.censorBoardRating} | Genre: {this.props.genre.join()} | Language: {this.props.language} | Rating : {this.props.rating} | Duration : {this.props.duration} | Category : { }</p>
+                    <div className="row">
+                        <div className="col text-start">
+                            <img src={this.props.image} className="MovieImage" alt="image"></img>
+                        </div>
+                        <div className="col text-start">
+                            <iframe className="MovieTrailer" src={this.props.video}
+                                title="MovieTrailer" frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col">
+                            <h1 className="text-start">Summary</h1>
+                            <p className="text-start">{this.props.summary}</p>
+
+                        </div>
+                        <div className="col">
+
+
+                            <h1 className="text-start">Cast</h1>
+                            <ul className="text-start MovieCast">
+                                {
+                                    this.props.cast.map(cast => {
+                                        return (
+                                            <li key={cast._id}>{cast.name}</li>
+                                        )
+                                    })
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="row">
+                        {/* <div className="col">
+
+
+                            <h1 className="text-start">Platforms</h1>
+                            <ul className="text-start MovieCast">
+                                {
+                                    this.props.platforms.map(p => {
+                                        return (
+                                            <li key={p._id}>{p.name}</li>
+                                        )
+                                    })
+                                }
+                            </ul>
+                        </div> */}
+                        {/* <div className="col">
+
+
+                            <h1 className="text-start">Category</h1>
+                            <ul className="text-start MovieCast">
+                                {
+                                    this.props.category.map(c => {
+                                        return (
+                                            <li key={c._id}>{c.name}</li>
+                                        )
+                                    })
+                                }
+                            </ul>
+                        </div> */}
+                    </div>
+                    <div>
+                        <h1 className="text-start">Write a Review</h1>
+                        <ReviewForm />
+                    </div>
+                    <div>
+                        <h1 className="text-start">Review</h1>
+                        <ul className="text-start MovieReview">
+                            <li>
+                                <p>Username says</p>
+                                <p>dnvjh  es fwfwjnsdjfsdscu  egdhnaj  d dhw jadjcs dwg
+                                    efjhjdhus j afeh j hgsb mfjcs c s mwdjnjewsufhnnjdf hd jfgsj
+                                </p>
+                            </li>
+                            <li>
+                                <p>Username says</p>
+                                <p>dnvjh  es fwfwjnsdjfsdscu  egdhnaj  d dhw jadjcs dwg
+                                    efjhjdhus j afeh j hgsb mfjcs c s mwdjnjewsufhnnjdf hd jfgsj
+                                </p>
+                            </li>
+                            <li>
+                                <p>Username says</p>
+                                <p>dnvjh  es fwfwjnsdjfsdscu  egdhnaj  d dhw jadjcs dwg
+                                    efjhjdhus j afeh j hgsb mfjcs c s mwdjnjewsufhnnjdf hd jfgsj
+                                </p>
+                            </li>
+                            <li>
+                                <p>Username says</p>
+                                <p>dnvjh  es fwfwjnsdjfsdscu  egdhnaj  d dhw jadjcs dwg
+                                    efjhjdhus j afeh j hgsb mfjcs c s mwdjnjewsufhnnjdf hd jfgsj
+                                </p>
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div>
-                    <h1 className="text-start">Write a Review</h1>
-                    <ReviewForm />
-                </div>
-                <div>
-                    <h1 className="text-start">Review</h1>
-                    <ul className="text-start MovieReview">
-                        <li>
-                            <p>Username says</p>
-                            <p>dnvjh  es fwfwjnsdjfsdscu  egdhnaj  d dhw jadjcs dwg
-                                efjhjdhus j afeh j hgsb mfjcs c s mwdjnjewsufhnnjdf hd jfgsj
-                            </p>
-                        </li>
-                        <li>
-                            <p>Username says</p>
-                            <p>dnvjh  es fwfwjnsdjfsdscu  egdhnaj  d dhw jadjcs dwg
-                                efjhjdhus j afeh j hgsb mfjcs c s mwdjnjewsufhnnjdf hd jfgsj
-                            </p>
-                        </li>
-                        <li>
-                            <p>Username says</p>
-                            <p>dnvjh  es fwfwjnsdjfsdscu  egdhnaj  d dhw jadjcs dwg
-                                efjhjdhus j afeh j hgsb mfjcs c s mwdjnjewsufhnnjdf hd jfgsj
-                            </p>
-                        </li>
-                        <li>
-                            <p>Username says</p>
-                            <p>dnvjh  es fwfwjnsdjfsdscu  egdhnaj  d dhw jadjcs dwg
-                                efjhjdhus j afeh j hgsb mfjcs c s mwdjnjewsufhnnjdf hd jfgsj
-                            </p>
-                        </li>
-                    </ul>
-                </div>
+                <br />
+                <br />
             </div>
-            <br />
-            <br />
-        </div>
-    );
+        );
+    }
 }
 
 export default ReviewPage;

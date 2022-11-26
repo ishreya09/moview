@@ -10,7 +10,7 @@ class ReviewMovie extends React.Component {
     constructor() {
         super();
         this.state = {
-            movie: [{}]
+            movie: []
         }
     }
     componentDidMount() {
@@ -37,7 +37,8 @@ class ReviewMovie extends React.Component {
                                     video={movie.trailer}
                                     title={movie.title} summary={movie.summary}
                                     rating={movie.rating} genre={movie.genre} cast={movie.cast} duration={movie.duration}
-                                    language={movie.language} review={movie.review} username={movie.username}  />
+                                    language={movie.language} review={movie.review} username={movie.username} 
+                                    censorBoardRating={movie.censorBoardRating} rating_user={movie.rating_user}/>
                             </>
                         )
                     }
