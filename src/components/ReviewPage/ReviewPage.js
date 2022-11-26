@@ -51,7 +51,7 @@ function ReviewPage(props) {
                     </div>
                     <div className="col text-start">
                         <iframe className="MovieTrailer" src={props.video}
-                            title="Harry Potter - Hermione's Most Sassy Moments" frameborder="0"
+                            title="" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
                     </div>

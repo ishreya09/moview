@@ -16,4 +16,14 @@ router.get("/movies",(request,response)=>{
     })
 })
 
+router.get("/:id",(request,response)=>{
+    MovieModels.find({_id:request.params.id})
+    .then((movies)=>{
+        response.json(movies)
+    })
+    .catch((err)=>{
+        response.json(err)
+    })
+})
+
 module.exports = router;
