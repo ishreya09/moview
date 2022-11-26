@@ -45,4 +45,14 @@ router.post('/addmovie',(request,response)=>{
 
 })
 
+router.get("/contact",(request,response)=>{
+    contactusTemplate.find()
+    .then((contacts)=>{
+        response.json(contact)
+    })
+    .catch((err)=>{
+        response.json(err)
+    })
+})
+
 module.exports=router

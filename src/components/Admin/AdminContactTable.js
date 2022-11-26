@@ -7,6 +7,9 @@ class AdminContact extends React.Component {
         super();
 
     }
+    componentDidMount(){
+        
+    }
     render() {
         return (
             <>
