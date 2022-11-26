@@ -51,7 +51,7 @@ function ReviewPage(props) {
                     </div>
                     <div className="col text-start">
                         <iframe className="MovieTrailer" src={props.video}
-                            title="" frameborder="0"
+                            title="MovieTrailer" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
                     </div>
@@ -60,8 +60,7 @@ function ReviewPage(props) {
                     <div className="col">
                         <h1 className="text-start">Summary</h1>
                         <p className="text-start">{props.summary}</p>
-                        <h1 className="text-start">Description</h1>
-                        <p className="text-start">{props.children}</p>
+                     
                     </div>
                     <div className="col">
 
@@ -73,12 +72,21 @@ function ReviewPage(props) {
                         </ul> */}
                         <h1 className="text-start">Cast</h1>
                         <ul className="text-start MovieCast">
+                            {/* <li>abc</li>
                             <li>abc</li>
                             <li>abc</li>
                             <li>abc</li>
                             <li>abc</li>
-                            <li>abc</li>
-                            <li>abc</li>
+                            <li>abc</li> */}
+                            {
+                    props.cast.map((movie) => {
+                        return (
+                          
+                            <li>{movie.name}</li> 
+                        
+                        )
+                    }
+                    )}
                         </ul>
                     </div>
                 </div>

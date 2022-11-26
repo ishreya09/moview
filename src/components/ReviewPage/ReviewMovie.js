@@ -18,10 +18,10 @@ class ReviewMovie extends React.Component {
         const id = currentURL.split('/')[4];
         axios.get("http://localhost:4000/movies/" + id)
             .then((res) => {
-                alert(res.data[0].title)
+               // alert(res.data[0].title)
                 this.setState({ movie: res.data }, () => {
-                    alert(this.state.movie[0].title);
-                    alert(this.state.movie[0].summary);
+                  //  alert(this.state.movie[0].title);
+                    //alert(this.state.movie[0].summary);
                 });
             })
 
