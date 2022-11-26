@@ -14,7 +14,7 @@ mongoose.connect(process.env.USER_ACCESS,()=>console.log("Database Connected"))
 app.use(express.json());
 app.use(cors());
 app.use('/',routesUrls); // routes all the urls in our app
-app.use('/movie',movieUrls);
+app.use('/movies',movieUrls);
 app.use('/admin',adminUrls);
 
 app.listen(4000,()=>console.log("backend server is up and running"))

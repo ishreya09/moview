@@ -198,8 +198,7 @@ function TopRated() {
         </div>
     )
 }
-
-function Upcoming() {
+/*function Upcoming() {
     return (
         <div className="container-fluid">
             <div className="row">
@@ -217,10 +216,7 @@ function Upcoming() {
             <hr />
         </div>
     )
-}
-
-
-
+}*/
 function Home() {
 
     return (
@@ -266,9 +262,7 @@ function Home() {
             <div className="MyCON container">
                 <Popular />
             </div>
-            <div className="MyCON container">
-                <Upcoming />
-            </div>
+          
             <div className="MyCON container">
                 <TopRated />
             </div>

@@ -33,9 +33,9 @@ function App() {
       <Router>
         <Routes>
           <Route index element={<Home></Home>}></Route>
-          <Route path="movie/:id" element={<ReviewMovie></ReviewMovie>}></Route>
+          <Route path="movies/:id" element={<ReviewMovie></ReviewMovie>}></Route>
           <Route path="/movies" element={<MovieList></MovieList>}></Route>
-          <Route path="/movies/:type" element={<MovieList></MovieList>}></Route>
+          {/* <Route path="/movies/:type" element={<MovieList></MovieList>}></Route> */}
           <Route path="/contactus" element={<ContactUs></ContactUs>}></Route>
           <Route path="/contactus/thank-you" element={<ThankYou></ThankYou>}></Route>
           <Route path="/signup" element={<SignupForm ></SignupForm>}></Route>
