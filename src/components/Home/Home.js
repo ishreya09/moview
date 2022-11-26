@@ -157,47 +157,47 @@ function About() {
     );
 }
 
-function Popular() {
-    return (
-        <div className="container-fluid">
-            <div className="row">
-                <h1>Popular</h1>
+// function Popular() {
+//     return (
+//         <div className="container-fluid">
+//             <div className="row">
+//                 <h1>Popular</h1>
 
-            </div>
-            <div className="row">
-                <MovieList />
+//             </div>
+//             <div className="row">
+//                 <MovieList />
 
-            </div>
-            <div className="row">
+//             </div>
+//             <div className="row">
 
-                <Link to="/movies/popular" className="Button btn btn-primary text-decoration-none text-light">Click here to see more</Link> <br />
-            </div>
-            {/* Movielist will return only 4 elements */}
-            <hr />
-        </div>
+//                 <Link to="/movies/popular" className="Button btn btn-primary text-decoration-none text-light">Click here to see more</Link> <br />
+//             </div>
+//             {/* Movielist will return only 4 elements */}
+//             <hr />
+//         </div>
 
-    );
-}
+//     );
+// }
 
-function TopRated() {
-    return (
-        <div className="container-fluid">
-            <div className="row">
-                <h1>Top Rated</h1>
+// function TopRated() {
+//     return (
+//         <div className="container-fluid">
+//             <div className="row">
+//                 <h1>Top Rated</h1>
 
-            </div>
-            <div className="row">
+//             </div>
+//             <div className="row">
 
-                <MovieList />
-            </div>
-            <div className="row">
+//                 <MovieList />
+//             </div>
+//             <div className="row">
 
-                <Link to="/movies/top-rated" className="Button btn btn-primary text-decoration-none text-light" >Click here to see more</Link><br />
-            </div>
-            <hr />
-        </div>
-    )
-}
+//                 <Link to="/movies/top-rated" className="Button btn btn-primary text-decoration-none text-light" >Click here to see more</Link><br />
+//             </div>
+//             <hr />
+//         </div>
+//     )
+// }
 /*function Upcoming() {
     return (
         <div className="container-fluid">
@@ -259,13 +259,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div className="MyCON container">
-                <Popular />
-            </div>
-          
-            <div className="MyCON container">
-                <TopRated />
-            </div>
+            
             <div className="MyCON container">
                 <About />
             </div>

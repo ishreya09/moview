@@ -20,8 +20,8 @@ import Admin from './components/Admin/Admin';
 import AddMovieForm from './components/Admin/AdminAddMovie';
 
 function App() {
-  var cast = [{ id: "1", actor: "abc" }, { id: "2", actor: "def" }, { id: "3", actor: "efg" }];
-  var review = [{ id: "1", review: "movie is great" }, { id: "2", review: "movie is great" }, { id: "3", review: "movie is great" }]
+  // var cast = [{ id: "1", actor: "abc" }, { id: "2", actor: "def" }, { id: "3", actor: "efg" }];
+  // var review = [{ id: "1", review: "movie is great" }, { id: "2", review: "movie is great" }, { id: "3", review: "movie is great" }]
 
   if(Cookies.get('username') == undefined){
     SetCookie();
@@ -33,9 +33,9 @@ function App() {
       <Router>
         <Routes>
           <Route index element={<Home></Home>}></Route>
-          <Route path="movies/:id" element={<ReviewMovie></ReviewMovie>}></Route>
+           <Route path="movies/:id" element={<ReviewMovie></ReviewMovie>}></Route> 
           <Route path="/movies" element={<MovieList></MovieList>}></Route>
-          {/* <Route path="/movies/:type" element={<MovieList></MovieList>}></Route> */}
+           <Route path="/category/:type" element={<MovieList></MovieList>}></Route> 
           <Route path="/contactus" element={<ContactUs></ContactUs>}></Route>
           <Route path="/contactus/thank-you" element={<ThankYou></ThankYou>}></Route>
           <Route path="/signup" element={<SignupForm ></SignupForm>}></Route>

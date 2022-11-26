@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const routesUrls= require('./routes/routes');
 const movieUrls= require('./routes/movies');
 const adminUrls= require('./routes/admin');
+const categoryUrls= require('./routes/category');
 const cors =require('cors');
 
 const app =express();
@@ -16,5 +17,6 @@ app.use(cors());
 app.use('/',routesUrls); // routes all the urls in our app
 app.use('/movies',movieUrls);
 app.use('/admin',adminUrls);
+app.use('/category',categoryUrls);
 
 app.listen(4000,()=>console.log("backend server is up and running"))
