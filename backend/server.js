@@ -5,6 +5,7 @@ const routesUrls= require('./routes/routes');
 const movieUrls= require('./routes/movies');
 const adminUrls= require('./routes/admin');
 const categoryUrls= require('./routes/category');
+const reviewUrls=require('./routes/review');
 const cors =require('cors');
 
 const app =express();
@@ -18,5 +19,6 @@ app.use('/',routesUrls); // routes all the urls in our app
 app.use('/movies',movieUrls);
 app.use('/admin',adminUrls);
 app.use('/category',categoryUrls);
+app.use('/review',reviewUrls);
 
 app.listen(4000,()=>console.log("backend server is up and running"))

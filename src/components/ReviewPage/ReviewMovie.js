@@ -18,10 +18,10 @@ class ReviewMovie extends React.Component {
         const id = currentURL.split('/')[4];
         axios.get("http://localhost:4000/movies/" + id)
             .then((res) => {
-               // alert(res.data[0].title)
+                // alert(res.data[0].title)
                 this.setState({ movie: res.data }, () => {
-                  //  alert(this.state.movie[0].title);
-                    //alert(this.state.movie[0].summary);
+                    //  alert(this.state.movie[0].title);
+                    // alert(typeof(this.state.movie[0].username));
                 });
             })
 
@@ -33,12 +33,15 @@ class ReviewMovie extends React.Component {
                     this.state.movie.map((movie) => {
                         return (
                             <>
-                                <ReviewPage image={movie.image}
+                                <ReviewPage
+                                    id={movie._id}
+                                    image={movie.image}
                                     video={movie.trailer}
                                     title={movie.title} summary={movie.summary}
-                                    rating={movie.rating} genre={movie.genre} cast={movie.cast} duration={movie.duration}
-                                    language={movie.language} review={movie.review} username={movie.username} 
-                                    censorBoardRating={movie.censorBoardRating} rating_user={movie.rating_user}/>
+                                    rating={movie.rating} genre={movie.genre} cast={movie.cast} 
+                                    duration={movie.duration}
+                                    language={movie.language} review={movie.review} username={movie.username}
+                                    censorBoardRating={movie.censorBoardRating} rating_user={movie.rating_user} />
                             </>
                         )
                     }
