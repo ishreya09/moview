@@ -22,11 +22,12 @@ class Navbar extends React.Component {
 
     submitQuery = (event) => {
         event.preventDefault();
-        axios.get("http://localhost:4000/movies/q/" + this.state.query)
-            .then((response) => {
-                this.setState({ movie: response.data })
+        // axios.get("http://localhost:4000/movies/q/" + this.state.query)
+        //     .then((response) => {
+        //         this.setState({ movie: response.data })
 
-            })
+        //     })
+        window.location="/movies/q/"+this.state.query;
     }
 
 
@@ -53,8 +54,8 @@ class Navbar extends React.Component {
                                     <a className="nav-link text-light" href="/contactus">Contact Us</a>
                                 </li>
                             </ul>
-                            <form className="d-flex" role="search">
-                                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                            <form className="d-flex" onSubmit={this.submitQuery} role="search">
+                                <input className="form-control me-2" type="search" placeholder="Search" onChange={this.setQuery} aria-label="Search" />
                                 <button className="Button btn btn-outline-dark text-light" type="submit">Search</button>
                             </form>
 
@@ -62,16 +63,7 @@ class Navbar extends React.Component {
                     </nav>
 
                 </div>
-                    {
-                        (this.state.movie.length !== 0) ? (
-                            <>
-                                {/* <MovieQuery /> */}
-                                
-                            </>
-                        ) : (
-                            <></>
-                        )
-                    }
+                    
             </div>
         );
     }
