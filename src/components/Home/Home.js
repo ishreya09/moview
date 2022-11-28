@@ -110,29 +110,29 @@ function CarouselSlideShow() {
 //className="text-start" 
 
 function About() {
+       
     return (
-        <div >
-            <h3 className="text-start" ><b>About Us</b></h3>
-            <p >
+        <div className="text-start">
+            <h3 className="text-start" style={{backgroundColor:"Highlight"}} ><b>About Us </b></h3>
+            <p style={{backgroundColor:"lavender"}}>
    
                 We are a team of passionate young students from PES UNIVERSITY,who are enthusiastic about Coding.<br/>
                 IMDb (an abbreviation of Internet Movie Database) is an online database of information related to films, television series, home videos, video games, and streaming content online – including cast, production crew and personal biographies, plot summaries, trivia, ratings, and fan and critical reviews. IMDb began as a fan-operated movie database on the Usenet group "rec.arts.movies" in 1990, and moved to the Web in 1993. It is now owned and operated by IMDb.com, Inc., a subsidiary of Amazon.<br/>
                 We have created our website : <b><u>"MoView"</u></b>,which is very similar to IMDb,with additional features like review,ratings and links to book the movie and to watch the movies on OTT platforms.<br/>
                 <b>Team: Shreya Mishra,Shreeja Rajesh,Shreya Tippireddy,Siri Gowri H</b>
             </p>
+         
             <div className="container">
                 <div className="row">
-                    
-                    <div className="col">
-                    <img src="https://png.pngtree.com/png-clipart/20210309/original/pngtree-movie-clip-art-cartoon-movie-clapper-board-png-image_5862055.jpg" alt="image1" style={{ height: "300px", width: "auto" }} />
-                    </div>
                     <div className="col">
                         <img src="https://png.pngtree.com/png-clipart/20190905/original/pngtree-barrel-popcorn-pattern-png-image_4538379.jpg" alt="image1" style={{ height: "300px", width: "auto" }} />
                     </div>
                     <div className="col">
-                        <img src="https://png.pngtree.com/png-clipart/20190705/original/pngtree-film-roll-png-image_4359386.jpg" alt="image1" style={{ height: "300px", width: "auto" }} />
+                        <img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-movie-cinema-entertainment-logo-with-neon-sign-effect-vector-illustration-png-image_3669641.jpg" alt="image1" style={{ height: "300px", width: "auto" }} />
                     </div>
-                    
+                    <div className="col">
+                        <img src="https://png.pngtree.com/png-clipart/20190705/original/pngtree-film-roll-png-image_4359386.jpg" alt="image1" style={{ height: "300px", width: "auto" }} />
+                    </div> 
                 </div>
             </div>
         </div>
@@ -200,17 +200,27 @@ function About() {
     )
 }*/
 function Home() {
-
+//     const myStyle={
+//     backgroundImage: 
+// // "url('https://png.pngtree.com/png-clipart/20190611/original/pngtree-watch-kit-popcorn-png-image_2864461.jpg')",
+// //    "url('https://png.pngtree.com/png-clipart/20190630/original/pngtree-white-dreamy-smoke-element-png-image_4155965.jpg')",
+//    "url('https://png.pngtree.com/png-clipart/20190705/original/pngtree-film-roll-png-image_4359386.jpg')",
+// backgroundSize: 'cover',
+//         backgroundRepeat: 'no-repeat',
+//     };   
     return (
-        <div className="Home">
+        <div className="Home" >
             <div className="MyCON container">
                 <div className="row">
                     <div className="col">
                         <h1 className="text-primary" style={{ fontSize: "100px", opacity: "90px" }}>MoVIEW</h1>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores autem cupiditate placeat assumenda quaerat, ut eveniet expedita saepe voluptatem illum cum optio ipsum enim illo, consequatur porro omnis est repudiandae sed sint minima ratione alias? Accusamus quisquam tempora repellat excepturi! Natus dolorum porro eveniet fugiat, odit quis in eaque, rem libero voluptatem quas blanditiis ipsam voluptatum, officiis sit praesentium rerum! Quasi magnam corrupti laborum pariatur dignissimos illum excepturi. A, suscipit. Ab cupiditate ducimus quo ex, perspiciatis corporis quidem repellendus laudantium itaque cum quisquam nihil magnam necessitatibus illum.
-                            Eius, ad est quam sed, non nesciunt error delectus vitae porro quisquam doloremque.
+                        <img src="https://png.pngtree.com/png-clipart/20210309/original/pngtree-movie-clip-art-cartoon-movie-clapper-board-png-image_5862055.jpg" height="300" width="300"></img> 
                         </p>
+                        <p style={{color:"royalblue",backgroundColor:"lightgoldenrodyellow",border:"1px solid black"}}>
+                         <center>LETS TALK ABOUT MOVIES!!!!</center>
+                        </p>
+                      
                         {
                             Cookie.get('username') == "AnonymousUser" ?
                                 (
@@ -221,7 +231,7 @@ function Home() {
                                 )
                                 : (
                                     <>
-                                        <h6 className="text-center text-primary">Hello {Cookie.get('name')}</h6>
+                                        <h6 className="text-center text-primary"><center>Hello {Cookie.get('name')}</center></h6>
                                         {Cookie.get('role') == "admin" ?
                                             (
                                                 <>
