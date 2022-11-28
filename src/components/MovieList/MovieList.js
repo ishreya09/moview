@@ -34,7 +34,9 @@ class MovieList extends React.Component {
                                 <>
                                         <Card id={movie._id} imageUrl={movie.image}
                                             title={movie.title} metades={movie.metadescription}
-                                            link={"http://localhost:3000/movies/"+movie._id} />
+                                            link={"http://localhost:3000/movies/"+movie._id}
+                                            rating={movie.rating} 
+                                            />
                                 </>
                             );
                         })

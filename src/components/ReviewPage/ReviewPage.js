@@ -225,6 +225,18 @@ class ReviewPage extends React.Component {
                             <a href={window.location.href + "/platform"}><button className="btn btn-primary Button" >Platforms Available</button></a> <br /><br />
                             <a href={window.location.href + "/category"}><button className="btn btn-primary Button" >Category</button></a> <br /><br />
                             <a href={window.location.href + "/review"}><button className="btn btn-primary Button" >See All Reviews</button></a> <br /><br />
+                            {
+                                (this.props.inTheatres=="true")?(
+                                    <>
+                                    <a href={this.props.BookMyShowLink}>
+                                        <button className="btn btn-primary Button" >Book My Show Link</button>
+                                    </a> <br /><br />
+                                    </>
+                                    
+                                ):(
+                                    <></>
+                                )
+                            }
                         </div>
                     </div>
                     <div>

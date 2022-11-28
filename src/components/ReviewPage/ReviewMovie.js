@@ -41,7 +41,9 @@ class ReviewMovie extends React.Component {
                                     rating={movie.rating} genre={movie.genre} cast={movie.cast} 
                                     duration={movie.duration}
                                     language={movie.language} review={movie.review} username={movie.username}
-                                    censorBoardRating={movie.censorBoardRating} rating_user={movie.rating_user} />
+                                    censorBoardRating={movie.censorBoardRating} rating_user={movie.rating_user} 
+                                    inTheatres={movie.inTheatres} releaseDate={movie.releaseDate} 
+                                    BookMyShowLink={movie.BookMyShowLink} />
                             </>
                         )
                     }
