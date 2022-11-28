@@ -107,12 +107,14 @@ function CarouselSlideShow() {
         </div>
     );
 }
+//className="text-start" 
 
 function About() {
     return (
-        <div>
-            <h3 className="text-start">About Us</h3>
-            <p className="text-start">
+        <div >
+            <h3 className="text-start" ><b>About Us</b></h3>
+            <p >
+   
                 We are a team of passionate young students from PES UNIVERSITY,who are enthusiastic about Coding.<br/>
                 IMDb (an abbreviation of Internet Movie Database) is an online database of information related to films, television series, home videos, video games, and streaming content online – including cast, production crew and personal biographies, plot summaries, trivia, ratings, and fan and critical reviews. IMDb began as a fan-operated movie database on the Usenet group "rec.arts.movies" in 1990, and moved to the Web in 1993. It is now owned and operated by IMDb.com, Inc., a subsidiary of Amazon.<br/>
                 We have created our website : <b><u>"MoView"</u></b>,which is very similar to IMDb,with additional features like review,ratings and links to book the movie and to watch the movies on OTT platforms.<br/>
@@ -120,18 +122,17 @@ function About() {
             </p>
             <div className="container">
                 <div className="row">
+                    
                     <div className="col">
-                        <img src="https://images.pexels.com/photos/13350289/pexels-photo-13350289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="image1" style={{ height: "300px", width: "auto" }} />
+                    <img src="https://png.pngtree.com/png-clipart/20210309/original/pngtree-movie-clip-art-cartoon-movie-clapper-board-png-image_5862055.jpg" alt="image1" style={{ height: "300px", width: "auto" }} />
                     </div>
                     <div className="col">
-                        <img src="https://images.pexels.com/photos/13350289/pexels-photo-13350289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="image1" style={{ height: "300px", width: "auto" }} />
+                        <img src="https://png.pngtree.com/png-clipart/20190905/original/pngtree-barrel-popcorn-pattern-png-image_4538379.jpg" alt="image1" style={{ height: "300px", width: "auto" }} />
                     </div>
                     <div className="col">
-                        <img src="https://images.pexels.com/photos/13350289/pexels-photo-13350289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="image1" style={{ height: "300px", width: "auto" }} />
+                        <img src="https://png.pngtree.com/png-clipart/20190705/original/pngtree-film-roll-png-image_4359386.jpg" alt="image1" style={{ height: "300px", width: "auto" }} />
                     </div>
-                    <div className="col">
-                        <img src="https://images.pexels.com/photos/13350289/pexels-photo-13350289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="image1" style={{ height: "300px", width: "auto" }} />
-                    </div>
+                    
                 </div>
             </div>
         </div>
