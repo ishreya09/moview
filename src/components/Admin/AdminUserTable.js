@@ -6,14 +6,17 @@ import Cookie from 'js-cookie';
 class AdminUser extends React.Component {
     constructor() {
         super();
+        this.state={
+            user:[]
+        }
         // axios.get()        
 
     }
     componentDidMount(){
-        axios.get("http://localhost:3000/admin/usertable")
+        axios.get("http://localhost:4000/admin/user")
             .then((res) => {
-                this.setState({ contact: (res.data) }, () => {
-                    // alert(this.state.contact);
+                this.setState({ user: (res.data) }, () => {
+                    alert(this.state.user);
                 });
             })
     }
@@ -41,14 +44,15 @@ class AdminUser extends React.Component {
                     <tbody>
                     <>
                                         {
-                                        this.state.contact.map((u)=>{
+                                        this.state.user.map((u)=>{
                                             return (
                                         
                                         <tr>
                                             <th scope="row">{u.date}</th>
                                             <td>{u.role}</td>
                                             <td>{u.username}</td>
-                                            <td>{u.message}</td>
+                                            <td>{u.name}</td>
+                                            <td>{u.email}</td>
                                             <td>{u._id}</td>
                                         </tr>
 

@@ -6,14 +6,17 @@ import Cookie from 'js-cookie';
 class AdminMovie extends React.Component {
     constructor() {
         super();
+        this.state={
+            movie:[]
+        }
         // axios.get()        
 
     }
     componentDidMount(){
         axios.get("http://localhost:4000/movies/movies")
             .then((res) => {
-                this.setState({ movies: (res.data) }, () => {
-                    // alert(this.state.contact);
+                this.setState({ movie: (res.data) }, () => {
+                   // alert(this.state.movie);
                 });
             })
     }
@@ -35,27 +38,26 @@ class AdminMovie extends React.Component {
                             <th scope="col">Genre</th>
                             <th scope="col">Language</th>
                             <th scope="col">Censor Board Rating</th>
-                            <th scope="col">Category</th>
-                            <th scope="col">Platform available</th>
+                            <th scope="col">Duration</th>
+                            <th scope="col">Release date</th>
                             <th scope="col">In Theatres</th>
                         </tr>
                     </thead>
                     <tbody>
                         <>
                         {
-                                        this.state.contact.map((m)=>{
+                                        this.state.movie.map((m)=>{
                                             return (
                                         
                                         <tr>
                                             <th scope="row">{m.title}</th>
-                                            <td>{m.ratin}</td>
-                                            <td>{m.genre}</td>
+                                            <td>{m.rating}</td>
+                                            <td>{m.genre.join()}</td>
                                             <td>{m.language}</td>
                                             <td>{m.censorBoardRating}</td>
-                                            <td>{m.summary}</td>
-                                            <td>{m.cast}</td>
-                                            <td>{m.platforms}</td>
-                                            <td>{m.inTheaters}</td>
+                                            <td>{m.duration}</td>
+                                            <td>{m.releaseDate}</td>
+                                            <td>{m.inTheatres}</td>
 
                                         </tr>
 

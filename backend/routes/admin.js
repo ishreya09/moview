@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const signupTemplate = require('../models/SignUpModels')
+const userTemplate = require('../models/SignUpModels')
 const movieTemplate= require('../models/MovieModels')
 const contactusTemplate = require('../models/ContactModels')
 const reviewTemplate =require('../models/ReviewModels').schema
@@ -57,7 +57,7 @@ router.get("/contact",(request,response)=>{
     })
 })
 router.get("/movies",(request,response)=>{
-    contactusTemplate.find()
+    moviesTemplate.find()
     .then((movies)=>{
         console.log(movies)
         response.json(movies)
@@ -68,7 +68,7 @@ router.get("/movies",(request,response)=>{
     })
 })
 router.get("/user",(request,response)=>{
-    contactusTemplate.find()
+    userTemplate.find()
     .then((user)=>{
         console.log(user)
         response.json(user)
