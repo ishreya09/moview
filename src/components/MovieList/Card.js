@@ -37,13 +37,13 @@ class LongText extends React.Component
 function Card(props) {
     return (
         <div className="MyCard">
-            <div className="card" style={{ width: "18rem" ,height:"40rem"}}>
+            <div className="card" style={{ width: "20rem" ,height:"50rem"}}>
                 <a href={props.link} className="">
                     <img src={props.imageUrl} className="CardImg card-img-top" alt="img" />
                 </a>
                 <div className="card-body">
                     <h5 className="card-title text-bold" style={{fontSize:"15px"}}>{props.title}</h5>
-                    <p className="card-text"  >{props.metades.substring(0,50)}</p>
+                    <p className="card-text"  >{props.metades.substring(0,250)}</p>
                     {/* <LongText content={props.metades}/> */}
                     <a href={props.link} className="Button btn btn-primary">Review Movie</a>
                 </div>
