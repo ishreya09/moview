@@ -8,7 +8,6 @@ import "./Home.css"
 import MovieList from "../MovieList/MovieList";
 import Cookie from "js-cookie";
 
-
 const images = [
     {
         id: "1",
@@ -24,7 +23,7 @@ const images = [
         alt: "movie2",
         height: "400px",
         width: "auto",
-        link:""
+        link:"http://localhost:3000/movies/6381f22703e7b3fb9f78c1ed"
     },
     {
         id: "3",
@@ -32,7 +31,7 @@ const images = [
         alt: "movie3",
         height: "400px",
         width: "auto",
-        link:""
+        link:"http://localhost:3000/movies/63842e5f9c81901e1540e72d"
     }
 ];
 
@@ -48,13 +47,15 @@ function CarouselSlideShow() {
         const nextIndex = index > 0 ? index - 1 : images.length - 1;
         setIndex(nextIndex);
     };
+    
 
     return (
-        <div className="Carousel">
+        <div className="Carousel" >
             <div
                 id="carouselExampleIndicators"
                 className="carousel slide"
                 data-bs-ride="carousel"
+                
             >
                 <div className="carousel-indicators">
                     {Array.from(Array(images.length).keys()).map((buttonIndex) => (
@@ -112,23 +113,10 @@ function About() {
         <div>
             <h3 className="text-start">About Us</h3>
             <p className="text-start">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum dolorum enim hic atque quos!
-                Fugiat eligendi fuga ipsam aliquid dolorem consequuntur assumenda modi quae quam debitis commodi
-                nesciunt eius soluta velit aliquam, quibusdam sit sunt minus reprehenderit cum omnis, quis ipsum
-                ducimus ratione? Porro libero blanditiis sit aliquam modi autem odio, perspiciatis consequuntur
-                optio sapiente aperiam fugiat, velit vel assumenda cupiditate? Repellat commodi consequatur eaque
-                minus rerum vel ipsam, corrupti blanditiis, ad suscipit similique vero! Labore sit repellat ea
-                repudiandae doloribus maiores nemo quaerat, quos, unde enim ab praesentium et sapiente, dolor possimus?
-                Nisi repudiandae ab at ipsum facilis ipsam totam, quam consequuntur aliquam necessitatibus est possimus
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum dolorum enim hic atque quos!
-                Fugiat eligendi fuga ipsam aliquid dolorem consequuntur assumenda modi quae quam debitis commodi
-                nesciunt eius soluta velit aliquam, quibusdam sit sunt minus reprehenderit cum omnis, quis ipsum
-                ducimus ratione? Porro libero blanditiis sit aliquam modi autem odio, perspiciatis consequuntur
-                optio sapiente aperiam fugiat, velit vel assumenda cupiditate? Repellat commodi consequatur eaque
-                minus rerum vel ipsam, corrupti blanditiis, ad suscipit similique vero! Labore sit repellat ea
-                repudiandae doloribus maiores nemo quaerat, quos, unde enim ab praesentium et sapiente, dolor possimus?
-                Nisi repudiandae ab at ipsum facilis ipsam totam, quam consequuntur aliquam necessitatibus est possimus
-
+                We are a team of passionate young students from PES UNIVERSITY,who are enthusiastic about Coding.<br/>
+                IMDb (an abbreviation of Internet Movie Database) is an online database of information related to films, television series, home videos, video games, and streaming content online – including cast, production crew and personal biographies, plot summaries, trivia, ratings, and fan and critical reviews. IMDb began as a fan-operated movie database on the Usenet group "rec.arts.movies" in 1990, and moved to the Web in 1993. It is now owned and operated by IMDb.com, Inc., a subsidiary of Amazon.<br/>
+                We have created our website : <b><u>"MoView"</u></b>,which is very similar to IMDb,with additional features like review,ratings and links to book the movie and to watch the movies on OTT platforms.<br/>
+                <b>Team: Shreya Mishra,Shreeja Rajesh,Shreya Tippireddy,Siri Gowri H</b>
             </p>
             <div className="container">
                 <div className="row">
@@ -136,22 +124,13 @@ function About() {
                         <img src="https://images.pexels.com/photos/13350289/pexels-photo-13350289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="image1" style={{ height: "300px", width: "auto" }} />
                     </div>
                     <div className="col">
-                        <a href="/movies"><button className="Button btn btn-outline-primary">Review A Movie</button></a>
-                        <br />
-                        <hr />
-                        <h3 className="text-center">Features</h3>
-                        <hr />
-                        <ul className="text-start">
-                            <li>dsjcjdsbv</li>
-                            <li>dsjcjdsbv</li>
-                            <li>dsjcjdsbv</li>
-                            <li>dsjcjdsbv</li>
-                            <li>dsjcjdsbv</li>
-                            <li>dsjcjdsbv</li>
-                            <li>dsjcjdsbv</li>
-                            <li>dsjcjdsbv</li>
-                            <li>dsjcjdsbv</li>
-                        </ul>
+                        <img src="https://images.pexels.com/photos/13350289/pexels-photo-13350289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="image1" style={{ height: "300px", width: "auto" }} />
+                    </div>
+                    <div className="col">
+                        <img src="https://images.pexels.com/photos/13350289/pexels-photo-13350289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="image1" style={{ height: "300px", width: "auto" }} />
+                    </div>
+                    <div className="col">
+                        <img src="https://images.pexels.com/photos/13350289/pexels-photo-13350289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="image1" style={{ height: "300px", width: "auto" }} />
                     </div>
                 </div>
             </div>
@@ -270,3 +249,6 @@ function Home() {
 }
 
 export default Home;
+
+
+
