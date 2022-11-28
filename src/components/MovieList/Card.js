@@ -42,8 +42,8 @@ function Card(props) {
                     <img src={props.imageUrl} className="CardImg card-img-top" alt="img" />
                 </a>
                 <div className="card-body">
-                    <h5 className="card-title">{props.title}</h5>
-                    <p className="card-text"  >{props.metades.substring(0,250)}</p>
+                    <h5 className="card-title text-bold" style={{fontSize:"15px"}}>{props.title}</h5>
+                    <p className="card-text"  >{props.metades.substring(0,50)}</p>
                     {/* <LongText content={props.metades}/> */}
                     <a href={props.link} className="Button btn btn-primary">Review Movie</a>
                 </div>
