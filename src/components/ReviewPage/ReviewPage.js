@@ -190,7 +190,7 @@ class ReviewPage extends React.Component {
             <div className="ReviewPage">
                 <div className="container text-center">
                     <h1 className="text-start text-primary MovieTitle">{this.props.title}</h1>
-                    <p className="text-start text-muted" style={{ fontSize: "20px" }}> {this.props.censorBoardRating} | Genre: {this.props.genre.join()} | Language: {this.props.language} | Rating : {this.props.rating} | Duration : {this.props.duration} | Category : { }</p>
+                    <p className="text-start text-muted" style={{ fontSize: "20px" }}> {this.props.censorBoardRating} | Genre: {this.props.genre.join()} | Language: {this.props.language} | Rating : {this.props.rating} | Duration : {this.props.duration} | Release Date : {this.props.releaseDate} </p>
                     <div className="row">
                         <div className="col text-start">
                             <img src={this.props.image} className="MovieImage" alt="image"></img>
