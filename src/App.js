@@ -21,6 +21,7 @@ import AddMovieForm from './components/Admin/AdminAddMovie';
 import Category from './components/ReviewPage/Category';
 import Platform from './components/ReviewPage/Platform';
 import Review from './components/ReviewPage/Review';
+import CategoryMovie from './components/MovieList/Category';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="movies/:id" element={<ReviewMovie></ReviewMovie>}></Route> 
           <Route path="/movies" element={<MovieList></MovieList>}></Route>
           <Route path="/movies/:id/category" element={<Category  />}></Route>
+          <Route path="/category/:category" element={<CategoryMovie  />}></Route>
           <Route path="/movies/:id/platform" element={<Platform />}></Route>
           <Route path="/movies/:id/review" element={<Review />}></Route>
           <Route path="/category/:type" element={<MovieList></MovieList>}></Route> 
