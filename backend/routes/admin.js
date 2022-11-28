@@ -48,11 +48,36 @@ router.post('/addmovie',(request,response)=>{
 router.get("/contact",(request,response)=>{
     contactusTemplate.find()
     .then((contacts)=>{
-        response.json(contact)
+        console.log(contacts)
+        response.json(contacts)
     })
     .catch((err)=>{
+        console.log(err)
         response.json(err)
     })
 })
+router.get("/movies",(request,response)=>{
+    contactusTemplate.find()
+    .then((movies)=>{
+        console.log(movies)
+        response.json(movies)
+    })
+    .catch((err)=>{
+        console.log(err)
+        response.json(err)
+    })
+})
+router.get("/user",(request,response)=>{
+    contactusTemplate.find()
+    .then((user)=>{
+        console.log(user)
+        response.json(user)
+    })
+    .catch((err)=>{
+        console.log(err)
+        response.json(err)
+    })
+})
+
 
 module.exports=router

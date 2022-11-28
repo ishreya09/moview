@@ -5,10 +5,18 @@ import Cookie from 'js-cookie';
 class AdminContact extends React.Component {
     constructor(){
         super();
+        this.state={
+            contact:[]
+        }
 
     }
     componentDidMount(){
-        
+        axios.get("http://localhost:4000/admin/contact")
+            .then((res) => {
+                this.setState({ contact: (res.data) }, () => {
+                    // alert(this.state.contact);
+                });
+            })
     }
     render() {
         return (
@@ -25,40 +33,28 @@ class AdminContact extends React.Component {
                                             <th scope="col">Username</th>
                                             <th scope="col">Email</th>
                                             <th scope="col">Message</th>
+                                            <td scope="col">ID</td>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <>
+                                        {
+                                        this.state.contact.map((c)=>{
+                                            return (
+                                        
                                         <tr>
-                                            <th scope="row">23rd Jan</th>
-                                            <td>Mark Otto</td>
-                                            <td>Otto@gmail.com</td>
-                                            <td>@mshfefhsdo</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">23rd Jan</th>
-                                            <td>Mark Otto</td>
-                                            <td>Otto@gmail.com</td>
-                                            <td>@mshfefhsdo</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">23rd Jan</th>
-                                            <td>Mark Otto</td>
-                                            <td>Otto@gmail.com</td>
-                                            <td>@mshfefhsdo</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">23rd Jan</th>
-                                            <td>Mark Otto</td>
-                                            <td>Otto@gmail.com</td>
-                                            <td>@mshfefhsdo</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">23rd Jan</th>
-                                            <td>Mark Otto</td>
-                                            <td>Otto@gmail.com</td>
-                                            <td>@mshfefhsdo</td>
+                                            <th scope="row">{c.date}</th>
+                                            <td>{c.name}</td>
+                                            <td>{c.email}</td>
+                                            <td>{c.message}</td>
+                                            <td>{c._id}</td>
                                         </tr>
 
+                                            )
+                                            })
+                                        }
+                                        
+                                        </>
                                     </tbody>
                                 </table>
 

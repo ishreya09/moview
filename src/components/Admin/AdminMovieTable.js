@@ -9,6 +9,14 @@ class AdminMovie extends React.Component {
         // axios.get()        
 
     }
+    componentDidMount(){
+        axios.get("http://localhost:4000/movies/movies")
+            .then((res) => {
+                this.setState({ movies: (res.data) }, () => {
+                    // alert(this.state.contact);
+                });
+            })
+    }
 
     render() {
         return (
@@ -33,46 +41,29 @@ class AdminMovie extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">Harry Potter</th>
-                            <td>9</td>
-                            <td>Children/Fantasy</td>
-                            <td>English</td>
-                            <td>U/A</td>
-                            <td>Popular</td>
-                            <td>On Amazon Prime</td>
-                            <td>False</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Minions</th>
-                            <td>8.2</td>
-                            <td>Animation</td>
-                            <td>English</td>
-                            <td>U</td>
-                            <td>Popular</td>
-                            <td>On Netflix</td>
-                            <td>False</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">KGF</th>
-                            <td>8.2</td>
-                            <td>Animation</td>
-                            <td>English</td>
-                            <td>U</td>
-                            <td>Popular</td>
-                            <td>On Netflix</td>
-                            <td>False</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Minions</th>
-                            <td>8.2</td>
-                            <td>Animation</td>
-                            <td>English</td>
-                            <td>U</td>
-                            <td>Popular</td>
-                            <td>On Netflix</td>
-                            <td>False</td>
-                        </tr>
+                        <>
+                        {
+                                        this.state.contact.map((m)=>{
+                                            return (
+                                        
+                                        <tr>
+                                            <th scope="row">{m.title}</th>
+                                            <td>{m.ratin}</td>
+                                            <td>{m.genre}</td>
+                                            <td>{m.language}</td>
+                                            <td>{m.censorBoardRating}</td>
+                                            <td>{m.summary}</td>
+                                            <td>{m.cast}</td>
+                                            <td>{m.platforms}</td>
+                                            <td>{m.inTheaters}</td>
+
+                                        </tr>
+
+                                            )
+                                            })
+                                        }
+                                        
+                        </>
                         
 
                     </tbody>

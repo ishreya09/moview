@@ -9,6 +9,14 @@ class AdminUser extends React.Component {
         // axios.get()        
 
     }
+    componentDidMount(){
+        axios.get("http://localhost:3000/admin/usertable")
+            .then((res) => {
+                this.setState({ contact: (res.data) }, () => {
+                    // alert(this.state.contact);
+                });
+            })
+    }
 
     render() {
         return (
@@ -31,38 +39,24 @@ class AdminUser extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">23rd Jan</th>
-                            <td>admin</td>
-                            <td>username</td>
-                            <td>Mark Otto</td>
-                            <td>Otto@gmail.com</td>
-                            <td>@mshfefhsdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">23rd Jan</th>
-                            <td>admin</td>
-                            <td>username</td>
-                            <td>Mark Otto</td>
-                            <td>Otto@gmail.com</td>
-                            <td>@mshfefhsdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">23rd Jan</th>
-                            <td>admin</td>
-                            <td>username</td>
-                            <td>Mark Otto</td>
-                            <td>Otto@gmail.com</td>
-                            <td>@mshfefhsdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">23rd Jan</th>
-                            <td>admin</td>
-                            <td>username</td>
-                            <td>Mark Otto</td>
-                            <td>Otto@gmail.com</td>
-                            <td>@mshfefhsdo</td>
-                        </tr>
+                    <>
+                                        {
+                                        this.state.contact.map((u)=>{
+                                            return (
+                                        
+                                        <tr>
+                                            <th scope="row">{u.date}</th>
+                                            <td>{u.role}</td>
+                                            <td>{u.username}</td>
+                                            <td>{u.message}</td>
+                                            <td>{u._id}</td>
+                                        </tr>
+
+                                            )
+                                            })
+                                        }
+                                        
+                                        </>
 
                     </tbody>
                 </table>
