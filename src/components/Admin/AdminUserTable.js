@@ -16,7 +16,7 @@ class AdminUser extends React.Component {
         axios.get("http://localhost:4000/admin/user")
             .then((res) => {
                 this.setState({ user: (res.data) }, () => {
-                    alert(this.state.user);
+                    // alert(this.state.user);
                 });
             })
     }

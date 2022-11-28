@@ -76,7 +76,7 @@ class ReviewForm extends React.Component {
         return (
             <>
             {
-                Cookie.get("username") != "AnonymousUser" ?
+                Cookie.get("username") !== "AnonymousUser" ?
                     (
             <div className="ReviewForm container">
                 <form onSubmit={this.onSubmitReview} className="container-fluid" method="post" action="#">
