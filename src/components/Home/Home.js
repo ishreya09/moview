@@ -12,25 +12,27 @@ import Cookie from "js-cookie";
 const images = [
     {
         id: "1",
-        url:
-            "https://images.pexels.com/photos/10550714/pexels-photo-10550714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        url:"https://www.themoviedb.org/t/p/original/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg",
         alt: "movie1",
         height: "400px",
-        width: "auto"
+        width: "auto",
+        link:"http://localhost:3000/movies/638118dd210e69a9fb299be5"
     },
     {
         id: "2",
-        url: "https://images.pexels.com/photos/13756268/pexels-photo-13756268.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        url: "https://www.themoviedb.org/t/p/original/xAG7S6X73B74CeLjo8gcVoWtunr.jpg",
         alt: "movie2",
         height: "400px",
-        width: "auto"
+        width: "auto",
+        link:""
     },
     {
         id: "3",
-        url: "https://images.pexels.com/photos/11586575/pexels-photo-11586575.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        url: "https://www.themoviedb.org/t/p/original/z4aaTHL75q66F7VejVpkefQNJ9k.jpg",
         alt: "movie3",
         height: "400px",
-        width: "auto"
+        width: "auto",
+        link:""
     }
 ];
 
@@ -76,7 +78,7 @@ function CarouselSlideShow() {
                                 active: imageIndex === index
                             })}
                         >
-                            <img className="CarouselImage" src={url} alt={alt} height={height} />
+                             <img className="CarouselImage" src={url} alt={alt} height={height} />
                         </div>
                     ))}
                 </div>
