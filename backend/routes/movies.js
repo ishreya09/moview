@@ -30,11 +30,11 @@ router.get("/:id",(request,response)=>{
 router.get("/q/:q",(request,response)=>{
     MovieModels.find()
     .then((movies)=>{
-        var name= request.params.q;
+        var name= request.params.q.toLowerCase();
         var movie=[];
         console.log("Query")
         for(var i=0;i<movies.length;i++){
-            var t= movies[i].title;
+            var t= movies[i].title.toLowerCase();
             // console.log(t)
             // console.log(request.params.q)
             // console.log(t.indexOf(name));

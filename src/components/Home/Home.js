@@ -16,6 +16,7 @@ const images = [
         height: "550px",
         width: "auto",
         link:"http://localhost:3000/movies/638118dd210e69a9fb299be5"
+        
     },
     {
         id: "2",
@@ -48,6 +49,7 @@ function CarouselSlideShow() {
         setIndex(nextIndex);
     };
     
+    
 
     return (
         <div className="Carousel col" >
@@ -79,7 +81,7 @@ function CarouselSlideShow() {
                                 active: imageIndex === index
                             })}
                         >
-                             <img className="CarouselImage" src={url} alt={alt} height={height} />
+                             <img className="CarouselImage" src={url} alt={alt} height={height} onClick={()=>{window.location="/movies"}}/>
                         </div>
                     ))}
                 </div>
