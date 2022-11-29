@@ -31,6 +31,8 @@ class LanguageMovie extends React.Component {
             // use map to parse the whole Cards from database
             <div className="container-fluid">
                 <>
+                <h1 className="text-primary">Language : {window.location.href.split('/')[4]}</ h1>
+
                     {
                         this.state.movie.map((movie) => {
                             return (

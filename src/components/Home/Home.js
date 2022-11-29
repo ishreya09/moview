@@ -248,12 +248,7 @@ function Home() {
                                 )
                         }
                         <br />
-                        <h3>Categories</h3>
-                        <>
-                                        <a href="/category/Popular" className="Button btn btn-outline-primary">Popular</a>
-                                        <a href="/category/Top Rated" className="Button btn btn-outline-primary">Top Rated</a>
-                                        <a href="/category/Upcoming" className="Button btn btn-outline-primary">Upcoming</a>
-                                    </>
+                        
 
                     </div>
                     <div className="col-8">
