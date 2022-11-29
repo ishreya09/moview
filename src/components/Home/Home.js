@@ -13,7 +13,7 @@ const images = [
         id: "1",
         url:"https://www.themoviedb.org/t/p/original/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg",
         alt: "movie1",
-        height: "400px",
+        height: "550px",
         width: "auto",
         link:"http://localhost:3000/movies/638118dd210e69a9fb299be5"
     },
@@ -21,7 +21,7 @@ const images = [
         id: "2",
         url: "https://www.themoviedb.org/t/p/original/xAG7S6X73B74CeLjo8gcVoWtunr.jpg",
         alt: "movie2",
-        height: "400px",
+        height: "550px",
         width: "auto",
         link:"http://localhost:3000/movies/6381f22703e7b3fb9f78c1ed"
     },
@@ -29,7 +29,7 @@ const images = [
         id: "3",
         url: "https://www.themoviedb.org/t/p/original/z4aaTHL75q66F7VejVpkefQNJ9k.jpg",
         alt: "movie3",
-        height: "400px",
+        height: "550px",
         width: "auto",
         link:"http://localhost:3000/movies/63842e5f9c81901e1540e72d"
     }
