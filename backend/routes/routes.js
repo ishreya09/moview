@@ -3,7 +3,6 @@ const router = express.Router();
 const signupTemplate = require('../models/SignUpModels')
 const movieTemplate= require('../models/MovieModels')
 const contactusTemplate = require('../models/ContactModels')
-const reviewTemplate =require('../models/ReviewModels').schema
 const bcrypt = require('bcryptjs');
 const MovieModels = require('../models/MovieModels');
 

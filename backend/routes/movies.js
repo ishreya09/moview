@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-const reviewTemplate =require('../models/ReviewModels').schema
+// const reviewTemplate =require('../models/ReviewModels').schema
 const bcrypt = require('bcryptjs');
 const MovieModels = require('../models/MovieModels');
 
