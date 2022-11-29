@@ -53,16 +53,7 @@ class Navbar extends React.Component {
                                 <li className="nav-item Button">
                                     <a className="nav-link text-light" href="/contactus">Contact Us</a>
                                 </li>
-                                <li class="nav-item Button dropdown" style = {{color:"white"}}>
-                                    <a className="nav-link dropdown-toggle Button" href="#" role="button" dataBsToggle="dropdown" ariaExpanded="false" style = {{color:"white"}}>
-                                        Category
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a className="dropdown-item Button" href="/category/Popular" style = {{color:"white"}}>Popular</a></li>
-                                        <li><a className="dropdown-item Button" href="/category/Upcoming" style = {{color:"white"}}>Upcoming</a></li>
-                                        <li><a className="dropdown-item Button" href="/category/Top%20Rated" style = {{color:"white"}}>Top Rated</a></li>
-                                    </ul>
-                                </li>
+                                
                             </ul>
                             <form className="d-flex" onSubmit={this.submitQuery} role="search">
                                 <input className="form-control me-2" type="search" placeholder="Search" onChange={this.setQuery} aria-label="Search" />

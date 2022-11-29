@@ -27,7 +27,30 @@ class MovieList extends React.Component {
             // movie list should be able to return the dynamic list of elements we want from a particular category
             // use map to parse the whole Cards from database
             <div className="container-fluid">
-                <>
+            <div className="row">
+            <div className="col col-2 bg-primary">
+            <nav id="navbar-example2" class="navbar bg-light px-3 mb-3">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading1">First</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading2">Second</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+        <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+        <li><hr class="dropdown-divider" /></li>
+        <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+            <div className="col col-8"> 
                     {
                         this.state.movie.map((movie) => {
                             return (
@@ -41,12 +64,12 @@ class MovieList extends React.Component {
                             );
                         })
                     }
-                </>
-                {/* <Card imageUrl="https://images.pexels.com/photos/14270535/pexels-photo-14270535.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-                    title="Inception" metades="Some quick example text to build on the card title and make up the bulk of the card's content."
-                    link="#" /> */}
+                </div>
 
             </div>
+            
+            </div>
+                
 
         );
 
