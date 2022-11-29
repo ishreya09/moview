@@ -59,6 +59,10 @@ class MovieList extends React.Component {
                                     <li class="nav-item">
                                         <a class="nav-link" href="/language/Telugu">Telugu</a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/language/Tamil">Tamil</a>
+                                    </li>
+                                    
                                 </ul>
                             </nav>
                         </nav>
