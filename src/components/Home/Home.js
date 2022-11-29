@@ -210,7 +210,7 @@ function Home() {
      };   
     return (
         <div className="Home"  >
-            <div className="MyCON container-fluid text-center">
+            <div className="MyCON container text-center">
                 <div className="row" >
                     <div className="col-md-4 ">
                         <h1 className="text-primary" style={{ fontSize: "100px", opacity: "90px" }}>MoVIEW</h1>
@@ -249,7 +249,7 @@ function Home() {
                     <div className="col-8">
                         <CarouselSlideShow />
                     </div>
-                </div>
+                </div><br />
             </div>
             
             <div className="MyCON container">
