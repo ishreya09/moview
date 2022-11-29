@@ -7,6 +7,7 @@ const adminUrls= require('./routes/admin');
 const categoryUrls= require('./routes/category');
 const reviewUrls=require('./routes/review');
 const cors =require('cors');
+const langUrls=require('./routes/language');
 
 const app =express();
 
@@ -20,5 +21,8 @@ app.use('/movies',movieUrls);
 app.use('/admin',adminUrls);
 app.use('/category',categoryUrls);
 app.use('/review',reviewUrls);
+app.use('/language',langUrls);
+
+
 
 app.listen(4000,()=>console.log("backend server is up and running"))

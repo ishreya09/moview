@@ -23,6 +23,7 @@ import Platform from './components/ReviewPage/Platform';
 import Review from './components/ReviewPage/Review';
 import CategoryMovie from './components/MovieList/Category';
 import QueryMovie from './components/MovieList/Query';
+import LanguageMovie from './components/MovieList/Language';
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
           <Route path="/movies" element={<MovieList></MovieList>}></Route>
           <Route path="/movies/:id/category" element={<Category  />}></Route>
           <Route path="/category/:category" element={<CategoryMovie  />}></Route>
+          <Route path="/language/:language" element={<LanguageMovie  />}></Route>
           <Route path="/movies/q/:query" element={<QueryMovie  />}></Route>
           <Route path="/movies/:id/platform" element={<Platform />}></Route>
           <Route path="/movies/:id/review" element={<Review />}></Route>
