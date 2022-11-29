@@ -50,7 +50,7 @@ function CarouselSlideShow() {
     
 
     return (
-        <div className="Carousel" >
+        <div className="Carousel col" >
             <div
                 id="carouselExampleIndicators"
                 className="carousel slide"
@@ -200,21 +200,21 @@ function About() {
     )
 }*/
 function Home() {
-//     const myStyle={
-//     backgroundImage: 
+    const myStyle={
+     backgroundImage: 
 // // "url('https://png.pngtree.com/png-clipart/20190611/original/pngtree-watch-kit-popcorn-png-image_2864461.jpg')",
 // //    "url('https://png.pngtree.com/png-clipart/20190630/original/pngtree-white-dreamy-smoke-element-png-image_4155965.jpg')",
-//    "url('https://png.pngtree.com/png-clipart/20190705/original/pngtree-film-roll-png-image_4359386.jpg')",
-// backgroundSize: 'cover',
-//         backgroundRepeat: 'no-repeat',
-//     };   
+   "url('https://png.pngtree.com/png-clipart/20190705/original/pngtree-film-roll-png-image_4359386.jpg')",
+ backgroundSize: 'cover',
+       backgroundRepeat: 'no-repeat',
+     };   
     return (
-        <div className="Home" >
-            <div className="MyCON container">
-                <div className="row">
-                    <div className="col">
+        <div className="Home"  >
+            <div className="MyCON container-fluid text-center">
+                <div className="row" >
+                    <div className="col-md-4 ">
                         <h1 className="text-primary" style={{ fontSize: "100px", opacity: "90px" }}>MoVIEW</h1>
-                        <p>
+                        <p style={{marginRight:"700px"}}>
                         <img src="https://png.pngtree.com/png-clipart/20210309/original/pngtree-movie-clip-art-cartoon-movie-clapper-board-png-image_5862055.jpg" height="300" width="300"></img> 
                         </p>
                         <p style={{color:"royalblue",backgroundColor:"lightgoldenrodyellow",border:"1px solid black"}}>
@@ -246,7 +246,7 @@ function Home() {
                                 )
                         }
                     </div>
-                    <div className="col">
+                    <div className="col-8">
                         <CarouselSlideShow />
                     </div>
                 </div>
